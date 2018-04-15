@@ -1,0 +1,42 @@
+{
+  "project_info": {
+    "project_number": "814743096342",
+    "firebase_url": "https://efm-easy-file-manager.firebaseio.com",
+    "project_id": "efm-easy-file-manager",
+    "storage_bucket": "efm-easy-file-manager.appspot.com"
+  },
+  "client": [
+    {
+      "client_info": {
+        "mobilesdk_app_id": "1:814743096342:android:8118018da6fa36c5",
+        "android_client_info": {
+          "package_name": "com.efm.filemanager"
+        }
+      },
+      "oauth_client": [
+        {
+          "client_id": "814743096342-cuu1bi51t6b8oe1k9acj2805e8qmo51s.apps.googleusercontent.com",
+          "client_type": 3
+        }
+      ],
+      "api_key": [
+        {
+          "current_key": "AIzaSyDNE_2TCNkvCvCnTP2lJBrP4V4Y0aFsHhg"
+        }
+      ],
+      "services": {
+        "analytics_service": {
+          "status": 1
+        },
+        "appinvite_service": {
+          "status": 1,
+          "other_platform_oauth_client": []
+        },
+        "ads_service": {
+          "status": 2
+        }
+      }
+    }
+  ],
+  "configuration_version": "1"
+}
