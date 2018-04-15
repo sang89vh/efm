@@ -7,7 +7,8 @@ buildscript {
     }
     dependencies {
         classpath 'com.android.tools.build:gradle:3.1.0'
-
+        // satochi2017
+        classpath 'com.google.gms:google-services:3.2.0'
         // NOTE: Do not place your application dependencies here; they belong
         // in the individual module build.gradle files
     }
@@ -19,6 +20,9 @@ allprojects {
         google()
         maven { url "https://jitpack.io" }
         mavenCentral()
+        maven {
+            url "https://maven.google.com"
+        }
     }
 }
 

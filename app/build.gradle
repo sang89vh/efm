@@ -21,7 +21,7 @@ android {
     }
 
     defaultConfig {
-        applicationId "com.amaze.filemanager"
+        applicationId "com.efm.filemanager"
         minSdkVersion 14
         targetSdkVersion 26
         versionCode 63
@@ -153,6 +153,12 @@ dependencies {
     }
 
     implementation 'com.android.support:multidex:1.0.2'//Multiple dex files
+    //Configuration 'compile' is obsolete and has been replaced with 'implementation'.It will be removed at the end of 2018
+    //satochi2017
+    implementation 'com.google.android.gms:play-services-ads:15.0.0'
+    // Add this line
+    implementation 'com.google.firebase:firebase-core:15.0.0'
+    implementation 'com.google.firebase:firebase-ads:15.0.0'
 }
 
 configurations.all {
@@ -186,3 +192,6 @@ if (propFile.canRead()) {
     println 'signing.properties not found'
     android.buildTypes.release.signingConfig = null
 }
+
+// satochi2017 Add to the bottom of the file
+apply plugin: 'com.google.gms.google-services'

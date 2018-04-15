@@ -1,12 +1,12 @@
 <?xml version="1.0" encoding="utf-8"?>
 
 <!--
-    Copyright (C) 2014 Arpit Khurana <arpitkh96@gmail.com>, Vishal Nehra <vishalmeham2@gmail.com>,
+    Copyright (C) 2014 satochi2017 <satochi2017@gmail.com>, Khanh Linh <nho89vh@gmail.com>>,
     Jens Klingenberg <mail@jensklingenberg.de>
 
-    This file is part of Amaze File Manager.
+    This file is part of efm File Manager.
 
-    Amaze File Manager is free software: you can redistribute it and/or modify
+    efm File Manager is free software: you can redistribute it and/or modify
     it under the terms of the GNU General Public License as published by
     the Free Software Foundation, either version 3 of the License, or
     (at your option) any later version.
@@ -43,7 +43,7 @@
 
     </android.support.v4.widget.SwipeRefreshLayout>
 
-    <com.amaze.filemanager.ui.views.FastScroller
+    <com.efm.filemanager.ui.views.FastScroller
         android:id="@+id/fastscroll"
         android:orientation="vertical"
         android:layout_width="wrap_content"

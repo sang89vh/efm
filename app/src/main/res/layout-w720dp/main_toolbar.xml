@@ -1,10 +1,10 @@
 
 <!--
-    Copyright (C) 2014 Arpit Khurana <arpitkh96@gmail.com>, Vishal Nehra <vishalmeham2@gmail.com>
+    Copyright (C) 2014 satochi2017 <satochi2017@gmail.com>, Khanh Linh <nho89vh@gmail.com>>
 
-    This file is part of Amaze File Manager.
+    This file is part of efm File Manager.
 
-    Amaze File Manager is free software: you can redistribute it and/or modify
+    efm File Manager is free software: you can redistribute it and/or modify
     it under the terms of the GNU General Public License as published by
     the Free Software Foundation, either version 3 of the License, or
     (at your option) any later version.
@@ -71,7 +71,8 @@
             android:src="@drawable/fab_shadow_light"/>
 
         <include layout="@layout/layout_fab"/>
-
+        <!--satochi2017-->
+        <include layout="@layout/abmob_banner"/>
     </android.support.design.widget.CoordinatorLayout>
 
     <View
@@ -85,7 +86,7 @@
         android:layout_width="@dimen/drawer_width"
         android:layout_height="match_parent"
         android:fitsSystemWindows="true">
-        <com.amaze.filemanager.ui.views.drawer.CustomNavigationView
+        <com.efm.filemanager.ui.views.drawer.CustomNavigationView
             android:id="@+id/navigation"
             android:layout_width="@dimen/drawer_width"
             android:layout_height="match_parent"

@@ -1,9 +1,9 @@
 <!--
-    Copyright (C) 2014 Arpit Khurana <arpitkh96@gmail.com>, Vishal Nehra <vishalmeham2@gmail.com>
+    Copyright (C) 2014 satochi2017 <satochi2017@gmail.com>, Khanh Linh <nho89vh@gmail.com>>
 
-    This file is part of Amaze File Manager.
+    This file is part of efm File Manager.
 
-    Amaze File Manager is free software: you can redistribute it and/or modify
+    efm File Manager is free software: you can redistribute it and/or modify
     it under the terms of the GNU General Public License as published by
     the Free Software Foundation, either version 3 of the License, or
     (at your option) any later version.
@@ -27,20 +27,20 @@
             android:summary="@string/color_summary"
             android:title="@string/color_title"/>
 
-        <com.amaze.filemanager.ui.views.preference.CheckBox
+        <com.efm.filemanager.ui.views.preference.CheckBox
             android:defaultValue="true"
             android:key="circularimages"
             android:summary="@string/circularimages"
             android:title="@string/circularicons"/>
-        <com.amaze.filemanager.ui.views.preference.CheckBox
+        <com.efm.filemanager.ui.views.preference.CheckBox
             android:defaultValue="true"
             android:key="showDividers"
             android:title="@string/showDividers"/>
-        <com.amaze.filemanager.ui.views.preference.CheckBox
+        <com.efm.filemanager.ui.views.preference.CheckBox
             android:defaultValue="true"
             android:key="showHeaders"
             android:title="@string/showHeaders"/>
-        <com.amaze.filemanager.ui.views.preference.CheckBox
+        <com.efm.filemanager.ui.views.preference.CheckBox
             android:defaultValue="true"
             android:key="intelliHideToolbar"
             android:summary="@string/intellihide_toolbar_summary"
@@ -49,7 +49,7 @@
     </PreferenceCategory>
 
     <PreferenceCategory android:title="@string/sidebar_preferences">
-        <com.amaze.filemanager.ui.views.preference.CheckBox
+        <com.efm.filemanager.ui.views.preference.CheckBox
             android:defaultValue="true"
             android:key="sidebar_folders_enable"
             android:title="@string/showfolders_pref_title"/>
@@ -58,7 +58,7 @@
             android:key="sidebar_folders"
             android:title="@string/showfolders_pref"/>
 
-        <com.amaze.filemanager.ui.views.preference.CheckBox
+        <com.efm.filemanager.ui.views.preference.CheckBox
             android:defaultValue="true"
             android:key="sidebar_quickaccess_enable"
             android:title="@string/showquickaccess_pref_title"/>
@@ -69,31 +69,31 @@
     </PreferenceCategory>
 
     <PreferenceCategory android:title="@string/general">
-        <com.amaze.filemanager.ui.views.preference.CheckBox
+        <com.efm.filemanager.ui.views.preference.CheckBox
             android:defaultValue="true"
             android:key="savepaths"
             android:summary="@string/savepathsummary"
             android:title="@string/savepaths"/>
-        <com.amaze.filemanager.ui.views.preference.CheckBox
+        <com.efm.filemanager.ui.views.preference.CheckBox
             android:defaultValue="true"
             android:key="showThumbs"
             android:summary="@string/thumbSummary"
             android:title="@string/thumb"/>
-        <com.amaze.filemanager.ui.views.preference.CheckBox
+        <com.efm.filemanager.ui.views.preference.CheckBox
             android:defaultValue="false"
             android:key="showHidden"
             android:title="@string/hidden"/>
-        <com.amaze.filemanager.ui.views.preference.CheckBox
+        <com.efm.filemanager.ui.views.preference.CheckBox
             android:defaultValue="true"
             android:key="showLastModified"
             android:summary="@string/lastModifiedSummary"
             android:title="@string/lastModifiedPref"/>
-        <com.amaze.filemanager.ui.views.preference.CheckBox
+        <com.efm.filemanager.ui.views.preference.CheckBox
             android:defaultValue="true"
             android:key="showFileSize"
             android:summary="@string/sizePrefSummary"
             android:title="@string/sizePref"/>
-        <com.amaze.filemanager.ui.views.preference.CheckBox
+        <com.efm.filemanager.ui.views.preference.CheckBox
             android:defaultValue="false"
             android:key="goBack_checkbox"
             android:summary="@string/back_summary"
@@ -123,13 +123,13 @@
             android:title="@string/crypt_pref_master_password_title">
         </Preference>
 
-        <com.amaze.filemanager.ui.views.preference.CheckBox
+        <com.efm.filemanager.ui.views.preference.CheckBox
             android:key="crypt_fingerprint"
             android:summary="@string/crypt_pref_fingerprint_summary"
             android:title="@string/crypt_pref_fingerprint_title"
             android:enabled="false"
             >
-        </com.amaze.filemanager.ui.views.preference.CheckBox>
+        </com.efm.filemanager.ui.views.preference.CheckBox>
     </PreferenceCategory>
 
     <PreferenceCategory android:title="@string/miscellaneous">
@@ -137,13 +137,13 @@
             android:key="advancedsearch"
             android:title="@string/advanced_search"/>
 
-        <com.amaze.filemanager.ui.views.preference.CheckBox
+        <com.efm.filemanager.ui.views.preference.CheckBox
             android:defaultValue="false"
             android:key="typeablepaths"
             android:summary="@string/typeablepaths_summary"
             android:title="@string/typeablepaths_title"/>
 
-        <com.amaze.filemanager.ui.views.preference.CheckBox
+        <com.efm.filemanager.ui.views.preference.CheckBox
             android:defaultValue="false"
             android:key="texteditor_newstack"
             android:title="@string/preference_newstack_title"
@@ -151,12 +151,12 @@
     </PreferenceCategory>
 
     <PreferenceCategory android:title="@string/advanced">
-        <com.amaze.filemanager.ui.views.preference.CheckBox
+        <com.efm.filemanager.ui.views.preference.CheckBox
             android:defaultValue="false"
             android:key="showPermissions"
             android:summary="@string/rootPrefSummary"
             android:title="@string/rootPref"/>
-        <com.amaze.filemanager.ui.views.preference.CheckBox
+        <com.efm.filemanager.ui.views.preference.CheckBox
             android:defaultValue="false"
             android:key="rootmode"
             android:summary="@string/rootmodesummary"
@@ -168,8 +168,5 @@
             android:key="about"
             android:title="@string/aboutFileManager"
             />
-        <Preference
-            android:key="feedback"
-            android:title="@string/feedback"/>
     </PreferenceCategory>
 </PreferenceScreen>

@@ -3,11 +3,11 @@
 
 <!--
 
-Copyright (C) 2014-2015 Arpit Khurana <arpitkh96@gmail.com>, Vishal Nehra <vishalmeham2@gmail.com>
+Copyright (C) 2014-2015 satochi2017 <satochi2017@gmail.com>, Khanh Linh <nho89vh@gmail.com>>
 
-This file is part of Amaze File Manager.
+This file is part of efm File Manager.
 
-Amaze File Manager is free software: you can redistribute it and/or modify
+efm File Manager is free software: you can redistribute it and/or modify
 
 it under the terms of the GNU General Public License as published by
 
@@ -284,7 +284,7 @@ along with this program. If not, see <http://www.gnu.org/licenses/>.
 
     <string name="rootPref">Show Permissions</string>
 
-    <string name="aboutFileManager">About Amaze File Manager</string>
+    <string name="aboutFileManager">About efm File Manager</string>
 
     <string name="version">Version</string>
 
@@ -562,7 +562,7 @@ along with this program. If not, see <http://www.gnu.org/licenses/>.
 
     <string name="ftp_notif_starting">FTP Server is starting</string>
 
-    <string name="ftp_notif_title">Amaze FTP Server running</string>
+    <string name="ftp_notif_title">efm FTP Server running</string>
 
     <string name="ftp_notif_text">at %s</string>
 

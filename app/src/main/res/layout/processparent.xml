@@ -1,9 +1,9 @@
 <!--
-    Copyright (C) 2014 Arpit Khurana <arpitkh96@gmail.com>, Vishal Nehra <vishalmeham2@gmail.com>
+    Copyright (C) 2014 satochi2017 <satochi2017@gmail.com>, Khanh Linh <nho89vh@gmail.com>>
 
-    This file is part of Amaze File Manager.
+    This file is part of efm File Manager.
 
-    Amaze File Manager is free software: you can redistribute it and/or modify
+    efm File Manager is free software: you can redistribute it and/or modify
     it under the terms of the GNU General Public License as published by
     the Free Software Foundation, either version 3 of the License, or
     (at your option) any later version.
@@ -91,7 +91,7 @@
                             android:layout_marginBottom="@dimen/material_generic"
                             />
 
-                        <com.amaze.filemanager.ui.views.ThemedTextView
+                        <com.efm.filemanager.ui.views.ThemedTextView
                             android:id="@+id/text_view_progress_file_name"
                             android:layout_width="wrap_content"
                             android:layout_height="wrap_content"
@@ -99,28 +99,28 @@
                             android:textStyle="italic"
                             />
 
-                        <com.amaze.filemanager.ui.views.ThemedTextView
+                        <com.efm.filemanager.ui.views.ThemedTextView
                             android:id="@+id/text_view_progress_bytes"
                             android:layout_width="wrap_content"
                             android:layout_height="wrap_content"
                             android:layout_marginBottom="@dimen/material_generic"
                             />
 
-                        <com.amaze.filemanager.ui.views.ThemedTextView
+                        <com.efm.filemanager.ui.views.ThemedTextView
                             android:id="@+id/text_view_progress_file"
                             android:layout_width="wrap_content"
                             android:layout_height="wrap_content"
                             android:layout_marginBottom="@dimen/material_generic"
                             />
 
-                        <com.amaze.filemanager.ui.views.ThemedTextView
+                        <com.efm.filemanager.ui.views.ThemedTextView
                             android:id="@+id/text_view_progress_speed"
                             android:layout_width="wrap_content"
                             android:layout_height="wrap_content"
                             android:layout_marginBottom="@dimen/material_generic"
                             />
 
-                        <com.amaze.filemanager.ui.views.ThemedTextView
+                        <com.efm.filemanager.ui.views.ThemedTextView
                             android:id="@+id/text_view_progress_timer"
                             android:layout_width="wrap_content"
                             android:layout_height="wrap_content"

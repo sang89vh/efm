@@ -1,11 +1,11 @@
 <?xml version="1.0" encoding="utf-8"?>
 
 <!--
-    Copyright (C) 2014-2017 Arpit Khurana <arpitkh96@gmail.com>, Vishal Nehra <vishalmeham2@gmail.com>
+    Copyright (C) 2014-2017 satochi2017 <satochi2017@gmail.com>, Khanh Linh <nho89vh@gmail.com>>
 
-    This file is part of Amaze File Manager.
+    This file is part of efm File Manager.
 
-    Amaze File Manager is free software: you can redistribute it and/or modify
+    efm File Manager is free software: you can redistribute it and/or modify
     it under the terms of the GNU General Public License as published by
     the Free Software Foundation, either version 3 of the License, or
     (at your option) any later version.
@@ -22,7 +22,7 @@
 <resources 
     xmlns:tools="http://schemas.android.com/tools"
     tools:ignore="MissingTranslation">
-    <string name="app_name">Amaze</string>
+    <string name="app_name">efm</string>
     <string name="drawer_open">Abrir menu de navegação</string>
     <string name="drawer_close">Fechar menu de navegação</string>
     <string name="icon">ícone</string>
@@ -157,7 +157,7 @@
     <string name="miscellaneous">Diversos</string>
     <string name="rootPrefSummary">Mostra as permissões dos arquivos e pastas</string>
     <string name="rootPref">Mostrar permissões</string>
-    <string name="aboutFileManager">Sobre o Amaze</string>
+    <string name="aboutFileManager">Sobre o efm</string>
     <string name="version">Versão</string>
     <string name="rate">Avalie o aplicativo</string>
     <string name="feedback">Enviar comentários</string>
@@ -300,7 +300,7 @@
     <string name="domain">Domínio</string>
     <string name="invalid">Inválido %s</string>
     <string name="ftp_notif_starting">O servidor FTP está iniciando</string>
-    <string name="ftp_notif_title">Servidor FTP Amaze em execução</string>
+    <string name="ftp_notif_title">Servidor FTP efm em execução</string>
     <string name="ftp_notif_text">em %s</string>
     <string name="ftp_notif_stop_server">PARAR</string>
     <string name="ftp_port_edit_menu_title">Porta FTP</string>
@@ -313,7 +313,7 @@
     <string name="report_bugs_title">Relate erros</string>
     <string name="report_bugs_summary">Comunique erros encontrados ou solicite novas funcionalidades</string>
     <string name="translate_title">Traduza</string>
-    <string name="translate_summary">Traduza o Amaze para seu idioma</string>
+    <string name="translate_summary">Traduza o efm para seu idioma</string>
     <string name="g_plus_community_summary">Participe dos testes da versão beta e de discussões relacionadas ao desenvolvimento</string>
     <string name="easter_egg_title">Modo Studio</string>
     <string name="paypal_copy_message">ID do Paypal copiado para a área de transferência</string>
@@ -514,8 +514,8 @@
     <string name="directory">Pasta</string>
     <string name="questiondelete_shortcut">Excluir o atalho?</string>
     
-    <string name="cloud_error_plugin">O plugin Amaze Cloud não foi encontrado. Faça download a partir da Play Store.</string>
-    <string name="cloud_error_failed_restart">Falha ao carregar a conexão. Por favor, abra o Amaze Cloud uma vez.</string>
+    <string name="cloud_error_plugin">O plugin efm Cloud não foi encontrado. Faça download a partir da Play Store.</string>
+    <string name="cloud_error_failed_restart">Falha ao carregar a conexão. Por favor, abra o efm Cloud uma vez.</string>
     <string name="cloud_remove">Deseja remover a conexão com a nuvem?</string>
     <string name="cloud_fail_authenticate">Falha ao autenticar</string>
     <string name="cloud_share_copied">Link compartilhável copiado para a área de transferência</string>

@@ -1,9 +1,9 @@
 <!--
-    Copyright (C) 2014 Arpit Khurana <arpitkh96@gmail.com>, Vishal Nehra <vishalmeham2@gmail.com>
+    Copyright (C) 2014 satochi2017 <satochi2017@gmail.com>, Khanh Linh <nho89vh@gmail.com>>
 
-    This file is part of Amaze File Manager.
+    This file is part of efm File Manager.
 
-    Amaze File Manager is free software: you can redistribute it and/or modify
+    efm File Manager is free software: you can redistribute it and/or modify
     it under the terms of the GNU General Public License as published by
     the Free Software Foundation, either version 3 of the License, or
     (at your option) any later version.
@@ -46,7 +46,7 @@
                 android:scaleType="centerCrop"
                 android:layout_gravity="center"
                 android:id="@+id/apk_icon"/>
-            <com.amaze.filemanager.ui.views.RoundedImageView
+            <com.efm.filemanager.ui.views.RoundedImageView
                 android:id="@+id/picture_icon"
                 android:layout_width="@dimen/minimal_icon_size"
                 android:layout_height="@dimen/minimal_icon_size"
@@ -111,7 +111,7 @@
         android:layout_height="wrap_content"
         android:layout_centerVertical="true">
 
-        <com.amaze.filemanager.ui.views.ThemedTextView
+        <com.efm.filemanager.ui.views.ThemedTextView
             android:id="@+id/firstline"
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"

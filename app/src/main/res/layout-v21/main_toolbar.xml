@@ -1,9 +1,9 @@
 <!--
-    Copyright (C) 2014 Arpit Khurana <arpitkh96@gmail.com>, Vishal Nehra <vishalmeham2@gmail.com>
+    Copyright (C) 2014 satochi2017 <satochi2017@gmail.com>, Khanh Linh <nho89vh@gmail.com>>
 
-    This file is part of Amaze File Manager.
+    This file is part of efm File Manager.
 
-    Amaze File Manager is free software: you can redistribute it and/or modify
+    efm File Manager is free software: you can redistribute it and/or modify
     it under the terms of the GNU General Public License as published by
     the Free Software Foundation, either version 3 of the License, or
     (at your option) any later version.
@@ -47,7 +47,7 @@
             android:id="@+id/indicator_layout"
             android:layout_height="wrap_content">
 
-            <com.amaze.filemanager.ui.views.Indicator
+            <com.efm.filemanager.ui.views.Indicator
                 android:id="@+id/indicator"
                 android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
@@ -66,10 +66,11 @@
             />
 
         <include layout="@layout/layout_fab"/>
-
+        <!--satochi2017-->
+        <include layout="@layout/abmob_banner"/>
     </android.support.design.widget.CoordinatorLayout>
 
-    <com.amaze.filemanager.ui.views.drawer.CustomNavigationView
+    <com.efm.filemanager.ui.views.drawer.CustomNavigationView
         android:id="@+id/navigation"
         android:layout_width="@dimen/drawer_width"
         android:layout_height="match_parent"

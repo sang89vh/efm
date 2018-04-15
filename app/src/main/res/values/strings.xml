@@ -1,27 +1,10 @@
 ﻿<?xml version="1.0" encoding="utf-8"?>
 
-<!--
-    Copyright (C) 2014-2017 Arpit Khurana <arpitkh96@gmail.com>, Vishal Nehra <vishalmeham2@gmail.com>
 
-    This file is part of Amaze File Manager.
-
-    Amaze File Manager is free software: you can redistribute it and/or modify
-    it under the terms of the GNU General Public License as published by
-    the Free Software Foundation, either version 3 of the License, or
-    (at your option) any later version.
-
-    This program is distributed in the hope that it will be useful,
-    but WITHOUT ANY WARRANTY; without even the implied warranty of
-    MERCHANTABILITY or FITNESS FOR A PARTICULAR PURPOSE.  See the
-    GNU General Public License for more details.
-
-    You should have received a copy of the GNU General Public License
-    along with this program.  If not, see <http://www.gnu.org/licenses/>.
-    -->
 
 <resources xmlns:tools="http://schemas.android.com/tools"
     tools:ignore="MissingTranslation">
-    <string name="app_name">Amaze File Manager</string>
+    <string name="app_name">efm File Manager</string>
     <string name="drawer_open">Open navigation drawer</string>
     <string name="drawer_close">Close navigation drawer</string>
     <string name="icon">icon</string>
@@ -157,7 +140,7 @@
     <string name="miscellaneous">Miscellaneous</string>
     <string name="rootPrefSummary">Show Permissions of Files and Folders</string>
     <string name="rootPref">Show Permissions</string>
-    <string name="aboutFileManager">About Amaze File Manager</string>
+    <string name="aboutFileManager">About efm File Manager</string>
     <string name="version">Version</string>
     <string name="rate">Rate the app</string>
     <string name="feedback">Send Feedback</string>
@@ -301,7 +284,7 @@
     <string name="domain">Domain</string>
     <string name="invalid">Invalid %s</string>
     <string name="ftp_notif_starting">FTP Server is starting</string>
-    <string name="ftp_notif_title">Amaze FTP Server running</string>
+    <string name="ftp_notif_title">efm FTP Server running</string>
     <string name="ftp_notif_text">at %s</string>
     <string name="ftp_notif_stop_server">STOP</string>
     <string name="ftp_port_edit_menu_title">FTP port</string>
@@ -314,7 +297,7 @@
     <string name="report_bugs_title">Report Bugs</string>
     <string name="report_bugs_summary">Report bugs or request new feature</string>
     <string name="translate_title">Translate</string>
-    <string name="translate_summary">Translate Amaze in your language</string>
+    <string name="translate_summary">Translate efm in your language</string>
     <string name="g_plus_community_summary">Take part in beta testing and discussions
         related to development</string>
     <string name="easter_egg_title">Studio Mode</string>
@@ -532,9 +515,9 @@
     <string name="directory">Directory</string>
     <string name="questiondelete_shortcut">Delete shortcut?</string>
 
-    <string name="cloud_error_plugin">Amaze Cloud plugin not found. Please download from Play Store.</string>
+    <string name="cloud_error_plugin">efm Cloud plugin not found. Please download from Play Store.</string>
     <string name="cloud_error_failed_restart">Failed to load the connection.
-        Please open Amaze Cloud once.</string>
+        Please open efm Cloud once.</string>
     <string name="cloud_remove">Do you want to remove the cloud connection?</string>
     <string name="cloud_fail_authenticate">Failed to authenticate</string>
     <string name="cloud_share_copied">Sharable link copied to clipboard</string>
@@ -572,12 +555,12 @@
     <string name="github" translatable="false">GitHub</string>
     <string name="developers">Developers</string>
     <string name="nobitcoinapp">Please install a bitcoin wallet</string>
-    <string name="channelname_normal">Amaze Notifications</string>
-    <string name="channeldescription_normal">Amaze File Manager\'s Notifications</string>
-    <string name="channelname_ftp">Amaze FTP Server</string>
-    <string name="channeldescription_ftp">Amaze File Manager FTP Server\'s Notifications</string>
+    <string name="channelname_normal">efm Notifications</string>
+    <string name="channeldescription_normal">efm File Manager\'s Notifications</string>
+    <string name="channelname_ftp">efm FTP Server</string>
+    <string name="channeldescription_ftp">efm File Manager FTP Server\'s Notifications</string>
 
-    <string name="appbar_name" translatable="false">Amaze</string>
+    <string name="appbar_name" translatable="false">efm</string>
     <string name="processing">Processing&#8230;</string>
     <string name="failed_no_connection">Failed to load files. Please check your connection.</string>
 
@@ -595,7 +578,7 @@
     <string name="ssh_connect_failed_host_key_changed_title">WARNING: REMOTE HOST IDENTIFICATION HAS CHANGED!</string>
     <string name="ssh_connect_failed_host_key_changed_message">
         IT IS POSSIBLE THAT SOMEONE IS DOING SOMETHING NASTY!\n\n
-        Someone could be eavesdropping on you right now (man-in-the-middle attack)! It is also possible that the host key has just been changed. The fingerprint for the public key sent by the remote host does not match the one stored in Amaze.\n\n
+        Someone could be eavesdropping on you right now (man-in-the-middle attack)! It is also possible that the host key has just been changed. The fingerprint for the public key sent by the remote host does not match the one stored in efm.\n\n
         Please contact your system administrator or setup a new connection to continue connecting to the server.
     </string>
     <string name="ssh_key_prompt_passphrase">Please enter key passphrase.</string>
@@ -610,7 +593,7 @@
     <string name="green">Green</string>
     <string name="password_no_match">Password doesn\'t match</string>
     <string name="deselect_all">Deselect All</string>
-    <string name="about_amaze">Material design file manager for Android</string>
+    <string name="about_efm">Material design file manager for Android</string>
     <string name="license">License</string>
     <string name="libraries">Libraries</string>
     <string name="password_repeat">Repeat password</string>

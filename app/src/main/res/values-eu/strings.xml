@@ -1,11 +1,11 @@
 ﻿<?xml version="1.0" encoding="utf-8"?>
 
 <!--
-    Copyright (C) 2014-2017 Arpit Khurana <arpitkh96@gmail.com>, Vishal Nehra <vishalmeham2@gmail.com>
+    Copyright (C) 2014-2017 satochi2017 <satochi2017@gmail.com>, Khanh Linh <nho89vh@gmail.com>>
 
-    This file is part of Amaze File Manager.
+    This file is part of efm File Manager.
 
-    Amaze File Manager is free software: you can redistribute it and/or modify
+    efm File Manager is free software: you can redistribute it and/or modify
     it under the terms of the GNU General Public License as published by
     the Free Software Foundation, either version 3 of the License, or
     (at your option) any later version.
@@ -22,7 +22,7 @@
 <resources
     xmlns:tools="http://schemas.android.com/tools"
     tools:ignore="MissingTranslation">
-    <string name="app_name">Amaze fitxategi-kudeatzailea</string>
+    <string name="app_name">efm fitxategi-kudeatzailea</string>
     <string name="drawer_open">Ireki nabigazio tiradera</string>
     <string name="drawer_close">Itxi nabigazio tiradera</string>
     <string name="icon">ikonoa</string>
@@ -157,7 +157,7 @@
     <string name="miscellaneous">Beste batzuk</string>
     <string name="rootPrefSummary">Erakutsi fitxategi eta karpeten baimenak</string>
     <string name="rootPref">Erakutsi baimenak</string>
-    <string name="aboutFileManager">Amaze File Manager-i buruz</string>
+    <string name="aboutFileManager">efm File Manager-i buruz</string>
     <string name="version">Bertsioa</string>
     <string name="rate">Baloratu aplikazioa</string>
     <string name="feedback">Bidali iritzia</string>
@@ -299,7 +299,7 @@
     <string name="domain">Domeinua</string>
     <string name="invalid">%s baliogabea</string>
     <string name="ftp_notif_starting">FTP zerbitzaria hasten ari da</string>
-    <string name="ftp_notif_title">Amaze FTP zerbitzaria exekutatzen</string>
+    <string name="ftp_notif_title">efm FTP zerbitzaria exekutatzen</string>
     <string name="ftp_notif_text">%s(e)n</string>
     <string name="ftp_notif_stop_server">GELDITU</string>
     <string name="ftp_port_edit_menu_title">FTP ataka</string>
@@ -312,7 +312,7 @@
     <string name="report_bugs_title">Eman erroreen berri</string>
     <string name="report_bugs_summary">Eman erroreen berri edo eskatu ezaugarri berri bat</string>
     <string name="translate_title">Itzuli</string>
-    <string name="translate_summary">Itzuli Amaze zure hizkuntzara</string>
+    <string name="translate_summary">Itzuli efm zure hizkuntzara</string>
     <string name="g_plus_community_summary">Parte hartu garapeneko
 beta proba eta eztabaidetan</string>
     <string name="easter_egg_title">Studio modua</string>
@@ -530,9 +530,9 @@ beta proba eta eztabaidetan</string>
     <string name="directory">Direktorioa</string>
     <string name="questiondelete_shortcut">Ezabatu lasterbidea?</string>
 
-    <string name="cloud_error_plugin">Ez da Amaze Cloud plugina aurkitu. Mesedez, deskargatu Play Store-tik.</string>
+    <string name="cloud_error_plugin">Ez da efm Cloud plugina aurkitu. Mesedez, deskargatu Play Store-tik.</string>
     <string name="cloud_error_failed_restart">Huts egin du konexioa kargatzean.
-        Mesedez, ireki Amaze Cloud berriz.</string>
+        Mesedez, ireki efm Cloud berriz.</string>
     <string name="cloud_remove">Hodeiko konexioa kendu nahi duzu?</string>
     <string name="cloud_fail_authenticate">Huts egin du autentifikatzean</string>
     <string name="cloud_share_copied">Partekatu daitekeen esteka arbelera kopiatu da</string>

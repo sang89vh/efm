@@ -1,10 +1,10 @@
 <?xml version="1.0" encoding="utf-8"?>
 <!--
-    Copyright (C) 2014 Arpit Khurana <arpitkh96@gmail.com>, Vishal Nehra <vishalmeham2@gmail.com>
+    Copyright (C) 2014 satochi2017 <satochi2017@gmail.com>, Khanh Linh <nho89vh@gmail.com>>
 
-    This file is part of Amaze File Manager.
+    This file is part of efm File Manager.
 
-    Amaze File Manager is free software: you can redistribute it and/or modify
+    efm File Manager is free software: you can redistribute it and/or modify
     it under the terms of the GNU General Public License as published by
     the Free Software Foundation, either version 3 of the License, or
     (at your option) any later version.
@@ -43,7 +43,7 @@
     <string name="japanese_translation_summary" translatable="false">Naofumi Fukue</string>
     <string name="tamil_translation_summary" translatable="false">Kuralarasi for StarsSoft</string>
     <string name="app_version" translatable="false">v3.2.1</string>
-    <string name="author_1" translatable="false">Arpit Khurana</string>
+    <string name="author_1" translatable="false">satochi2017</string>
     <string name="author_2" translatable="false">Vishal Nehra</string>
     <string name="developer_1" translatable="false">Emmanuel Messulam</string>
 

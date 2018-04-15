@@ -1,11 +1,11 @@
 <?xml version="1.0" encoding="utf-8"?>
 
 <!--
-    Copyright (C) 2014-2017 Arpit Khurana <arpitkh96@gmail.com>, Vishal Nehra <vishalmeham2@gmail.com>
+    Copyright (C) 2014-2017 satochi2017 <satochi2017@gmail.com>, Khanh Linh <nho89vh@gmail.com>>
 
-    This file is part of Amaze File Manager.
+    This file is part of efm File Manager.
 
-    Amaze File Manager is free software: you can redistribute it and/or modify
+    efm File Manager is free software: you can redistribute it and/or modify
     it under the terms of the GNU General Public License as published by
     the Free Software Foundation, either version 3 of the License, or
     (at your option) any later version.
@@ -22,7 +22,7 @@
 <resources
     xmlns:tools="http://schemas.android.com/tools"
     tools:ignore="MissingTranslation">
-    <string name="app_name">Amaze File Manager</string>
+    <string name="app_name">efm File Manager</string>
     <string name="drawer_open">Buka laci navigasi</string>
     <string name="drawer_close">Tutup laci navigasi</string>
     <string name="icon">Ikon</string>
@@ -149,7 +149,7 @@
     <string name="miscellaneous">Macam-macam</string>
     <string name="rootPrefSummary">Tampilkan Perizinan dari Berkas dan Folder</string>
     <string name="rootPref">Tampilkan Perizinan</string>
-    <string name="aboutFileManager">Tentang Amaze File Manager</string>
+    <string name="aboutFileManager">Tentang efm File Manager</string>
     <string name="version">Versi</string>
     <string name="rate">Beri nilai apl</string>
     <string name="feedback">Kirim Umpanbalik</string>
@@ -292,7 +292,7 @@ jika tidak, akan mencari yang lain</string>
     <string name="domain">Domain</string>
     <string name="invalid">%s tidak valid</string>
     <string name="ftp_notif_starting">Server FTP sedang berjalan</string>
-    <string name="ftp_notif_title">Server FTP Amaze sedang berjalan</string>
+    <string name="ftp_notif_title">Server FTP efm sedang berjalan</string>
     <string name="ftp_notif_text">pada %s</string>
     <string name="ftp_notif_stop_server">BERHENTI</string>
     <string name="ftp_port_edit_menu_title">Pilih Port FTP</string>
@@ -305,7 +305,7 @@ jika tidak, akan mencari yang lain</string>
     <string name="report_bugs_title">Laporkan Bug</string>
     <string name="report_bugs_summary">Laporkan bug atau minta fitur baru</string>
     <string name="translate_title">Terjemahkan</string>
-    <string name="translate_summary">Terjemahkan Amaze ke bahasa Anda</string>
+    <string name="translate_summary">Terjemahkan efm ke bahasa Anda</string>
     <string name="g_plus_community_summary">Ambil bagian dalam uji coba versi beta dan diskusi
 terkait dengan pengembangan</string>
     <string name="easter_egg_title">Mode Studio</string>
