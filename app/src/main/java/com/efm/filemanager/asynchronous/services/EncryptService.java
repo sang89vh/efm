@@ -26,7 +26,7 @@ import com.efm.filemanager.utils.ServiceWatcherUtil;
 import java.util.ArrayList;
 
 /**
- * Created by vishal on 8/4/17 edited by Emmanuel Messulam <emmanuelbendavid@gmail.com>
+ * Created by Khanh Linh <nho89vh@gmail.com>  on 8/4/17 edited by Khanh Linh <nho89vh@gmail.com>
  */
 
 public class EncryptService extends AbstractProgressiveService {

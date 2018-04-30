@@ -1,7 +1,7 @@
 package com.efm.filemanager.fragments.preference_fragments;
 
 /**
- * @author Emmanuel Messulam <emmanuelbendavid@gmail.com>
+ * @author Khanh Linh <nho89vh@gmail.com>
  *         on 1/1/2018, at 21:16.
  */
 

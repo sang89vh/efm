@@ -48,7 +48,7 @@ import javax.crypto.spec.SecretKeySpec;
 import javax.security.auth.x500.X500Principal;
 
 /**
- * Created by vishal on 6/4/17.
+ * Created by Khanh Linh <nho89vh@gmail.com>  on 6/4/17.
  *
  * Class provide helper methods to encrypt/decrypt various type of files, or passwords
  * We take the password from user before encrypting file. First, the password is encrypted against
@@ -83,7 +83,7 @@ public class CryptUtil {
     // TODO: Generate a random IV every time, and keep track of it (in database against encrypted files)
     private static final String IV = "LxbHiJhhUXcj";    // 12 byte long IV supported by android for GCM
 
-    public static final String CRYPT_EXTENSION = ".aze";
+    public static final String CRYPT_EXTENSION = ".efm";
 
     private ProgressHandler progressHandler;
     private ArrayList<HybridFile> failedOps;

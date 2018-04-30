@@ -1,7 +1,7 @@
 package com.efm.filemanager.utils;
 
 /**
- * @author Emmanuel Messulam <emmanuelbendavid@gmail.com>
+ * @author Khanh Linh <nho89vh@gmail.com>
  *         on 8/12/2017, at 16:33.
  */
 

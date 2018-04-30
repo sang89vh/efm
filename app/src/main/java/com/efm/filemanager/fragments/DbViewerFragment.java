@@ -19,7 +19,7 @@ import com.efm.filemanager.utils.Utils;
 import com.efm.filemanager.utils.theme.AppTheme;
 
 /**
- * Created by Vishal on 06-02-2015.
+ * Created by Khanh Linh <nho89vh@gmail.com>  on 06-02-2015.
  */
 public class DbViewerFragment extends Fragment {
     public DatabaseViewerActivity databaseViewerActivity;

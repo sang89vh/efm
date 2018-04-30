@@ -33,13 +33,11 @@ import com.efm.filemanager.fragments.MainFragment;
 import com.efm.filemanager.utils.application.AppConfig;
 import com.efm.filemanager.asynchronous.services.CopyService;
 import com.efm.filemanager.utils.DataUtils;
-import com.efm.filemanager.utils.cloud.CloudUtil;
 import com.efm.filemanager.utils.files.CryptUtil;
 import com.efm.filemanager.utils.files.FileUtils;
 import com.efm.filemanager.utils.OpenMode;
 import com.efm.filemanager.utils.RootUtils;
 import com.efm.filemanager.utils.ServiceWatcherUtil;
-import com.cloudrail.si.interfaces.CloudStorage;
 
 import java.io.File;
 import java.net.MalformedURLException;
@@ -113,32 +111,6 @@ public class MoveFiles extends AsyncTask<ArrayList<String>, Void, Boolean> {
                     }
                 }
                 break;
-            case DROPBOX:
-            case BOX:
-            case ONEDRIVE:
-            case GDRIVE:
-                for (int i=0; i<paths.size(); i++) {
-                    for (HybridFileParcelable baseFile : files.get(i)) {
-
-                        DataUtils dataUtils = DataUtils.getInstance();
-
-                        CloudStorage cloudStorage = dataUtils.getAccount(mode);
-                        String targetPath = paths.get(i) + "/" + baseFile.getName();
-                        if (baseFile.getMode() == mode) {
-                            // source and target both in same filesystem, use API method
-                            try {
-
-                                cloudStorage.move(CloudUtil.stripPath(mode, baseFile.getPath()),
-                                        CloudUtil.stripPath(mode, targetPath));
-                            } catch (Exception e) {
-                                return false;
-                            }
-                        }  else {
-                            // not in same filesystem, execute service
-                            return false;
-                        }
-                    }
-                }
             default:
                 return false;
         }

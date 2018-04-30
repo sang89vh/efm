@@ -11,7 +11,7 @@ import android.support.v4.app.NotificationCompat;
 import com.efm.filemanager.R;
 
 /**
- * @author Emmanuel Messulam <emmanuelbendavid@gmail.com>
+ * @author Khanh Linh <nho89vh@gmail.com>
  *         on 17/9/2017, at 13:34.
  */
 

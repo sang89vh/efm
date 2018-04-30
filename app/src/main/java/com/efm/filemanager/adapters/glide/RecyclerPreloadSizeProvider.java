@@ -14,7 +14,7 @@ import com.bumptech.glide.request.transition.Transition;
  * This uses a callback to know for each position what View is the
  * one in which you're going to insert the image.
  *
- * @author Emmanuel Messulam <emmanuelbendavid@gmail.com>
+ * @author Khanh Linh <nho89vh@gmail.com>
  *         on 10/12/2017, at 12:27.
  */
 

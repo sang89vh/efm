@@ -1,3 +1,5 @@
+package com.efm.filemanager.activities;
+
 /*
  * Copyright (C) 2014 satochi2017 <satochi2017@gmail.com>, Khanh Linh <nho89vh@gmail.com>>,
  *                      Emmanuel Messulam<emmanuelbendavid@gmail.com>
@@ -18,7 +20,6 @@
  * along with this program.  If not, see <http://www.gnu.org/licenses/>.
  */
 
-package com.efm.filemanager.activities;
 
 import android.app.Activity;
 import android.app.ActivityManager;
@@ -141,7 +142,7 @@ import static com.efm.filemanager.fragments.preference_fragments.PreferencesCons
 import static com.efm.filemanager.fragments.preference_fragments.PreferencesConstants.PREFERENCE_SHOW_HIDDENFILES;
 import static com.efm.filemanager.fragments.preference_fragments.PreferencesConstants.PREFERENCE_VIEW;
 
-public class MainActivity extends ThemedActivity implements OnRequestPermissionsResultCallback,
+public class CustomActivity extends ThemedActivity implements OnRequestPermissionsResultCallback,
         SmbConnectionListener, DataChangeListener, BookmarkCallback,
         SearchWorkerFragment.HelperCallbacks,
         LoaderManager.LoaderCallbacks<Cursor> {
@@ -189,7 +190,7 @@ public class MainActivity extends ThemedActivity implements OnRequestPermissions
     public AppBar appbar;
     public Drawer drawer;
     //public HistoryManager history, grid;
-    public MainActivity mainActivity = this;
+    public CustomActivity mainActivity = this;
     public Context con = this;
     public String zippath;
     public boolean openProcesses = false;
@@ -654,7 +655,7 @@ public class MainActivity extends ThemedActivity implements OnRequestPermissions
         } else {
             Log.d("TAG", "The interstitial wasn't loaded yet.");
         }
-        
+
         Fragment fragment = getFragmentAtFrame();
         if (getAppbar().getSearchView().isShown()) {
             // hide search view if visible, with an animation
@@ -1132,7 +1133,7 @@ public class MainActivity extends ThemedActivity implements OnRequestPermissions
 
         CryptHandler cryptHandler = new CryptHandler(this);
         cryptHandler.close();
-        
+
         SshConnectionPool.getInstance().expungeAllConnections();
 
         /*if (mainFragment!=null)
@@ -1788,3 +1789,4 @@ public class MainActivity extends ThemedActivity implements OnRequestPermissions
     public void onLoaderReset(Loader<Cursor> loader) {
     }
 }
+

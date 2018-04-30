@@ -25,7 +25,7 @@ import java.security.NoSuchAlgorithmException;
 /**
  * Generates hashes from files (MD5 and SHA256)
  *
- * Created by Vishal on 05-02-2015 edited by Emmanuel Messulam<emmanuelbendavid@gmail.com>
+ * Created by Khanh Linh <nho89vh@gmail.com>  on 05-02-2015 edited by Emmanuel Messulam<emmanuelbendavid@gmail.com>
  */
 public class GenerateHashesTask extends AsyncTask<Void, String, String[]> {
 

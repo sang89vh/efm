@@ -28,11 +28,9 @@ import com.efm.filemanager.BuildConfig;
 import com.efm.filemanager.R;
 import com.efm.filemanager.activities.MainActivity;
 import com.efm.filemanager.activities.PreferencesActivity;
-import com.efm.filemanager.database.CloudHandler;
 import com.efm.filemanager.filesystem.HybridFile;
 import com.efm.filemanager.filesystem.RootHelper;
 import com.efm.filemanager.fragments.AppsListFragment;
-import com.efm.filemanager.fragments.CloudSheetFragment;
 import com.efm.filemanager.fragments.FTPServerFragment;
 import com.efm.filemanager.fragments.MainFragment;
 import com.efm.filemanager.fragments.preference_fragments.PreferencesConstants;
@@ -46,17 +44,11 @@ import com.efm.filemanager.utils.ScreenUtils;
 import com.efm.filemanager.utils.TinyDB;
 import com.efm.filemanager.utils.Utils;
 import com.efm.filemanager.utils.application.AppConfig;
-import com.efm.filemanager.utils.cloud.CloudUtil;
 import com.efm.filemanager.utils.color.ColorUsage;
 import com.efm.filemanager.utils.files.FileUtils;
 import com.efm.filemanager.utils.theme.AppTheme;
 import com.android.volley.VolleyError;
 import com.android.volley.toolbox.ImageLoader;
-import com.cloudrail.si.interfaces.CloudStorage;
-import com.cloudrail.si.services.Box;
-import com.cloudrail.si.services.Dropbox;
-import com.cloudrail.si.services.GoogleDrive;
-import com.cloudrail.si.services.OneDrive;
 
 import java.io.File;
 import java.util.ArrayList;
@@ -67,7 +59,7 @@ import static com.efm.filemanager.fragments.preference_fragments.PreferencesCons
 import static com.efm.filemanager.fragments.preference_fragments.PreferencesConstants.PREFERENCE_SHOW_SIDEBAR_QUICKACCESSES;
 
 /**
- * @author Emmanuel Messulam <emmanuelbendavid@gmail.com>
+ * @author Khanh Linh <nho89vh@gmail.com>
  *         on 26/12/2017, at 23:08.
  */
 
@@ -265,48 +257,6 @@ public class Drawer implements NavigationView.OnNavigationItemSelectedListener {
 
         ArrayList<String[]> accountAuthenticationList = new ArrayList<>();
 
-        if (CloudSheetFragment.isCloudProviderAvailable(mainActivity)) {
-            for (CloudStorage cloudStorage : dataUtils.getAccounts()) {
-                if (cloudStorage instanceof Dropbox) {
-                    addNewItem(menu, CLOUDS_GROUP, order++, CloudHandler.CLOUD_NAME_DROPBOX,
-                            new MenuMetadata(CloudHandler.CLOUD_PREFIX_DROPBOX + "/"),
-                            R.drawable.ic_dropbox_white_24dp, R.drawable.ic_edit_24dp);
-
-                    accountAuthenticationList.add(new String[] {
-                            CloudHandler.CLOUD_NAME_DROPBOX,
-                            CloudHandler.CLOUD_PREFIX_DROPBOX + "/",
-                    });
-                } else if (cloudStorage instanceof Box) {
-                    addNewItem(menu, CLOUDS_GROUP, order++, CloudHandler.CLOUD_NAME_BOX,
-                            new MenuMetadata(CloudHandler.CLOUD_PREFIX_BOX + "/"),
-                            R.drawable.ic_box_white_24dp, R.drawable.ic_edit_24dp);
-
-                    accountAuthenticationList.add(new String[] {
-                            CloudHandler.CLOUD_NAME_BOX,
-                            CloudHandler.CLOUD_PREFIX_BOX + "/",
-                    });
-                } else if (cloudStorage instanceof OneDrive) {
-                    addNewItem(menu, CLOUDS_GROUP, order++, CloudHandler.CLOUD_NAME_ONE_DRIVE,
-                            new MenuMetadata(CloudHandler.CLOUD_PREFIX_ONE_DRIVE + "/"),
-                            R.drawable.ic_onedrive_white_24dp, R.drawable.ic_edit_24dp);
-
-                    accountAuthenticationList.add(new String[] {
-                            CloudHandler.CLOUD_NAME_ONE_DRIVE,
-                            CloudHandler.CLOUD_PREFIX_ONE_DRIVE + "/",
-                    });
-                } else if (cloudStorage instanceof GoogleDrive) {
-                    addNewItem(menu, CLOUDS_GROUP, order++, CloudHandler.CLOUD_NAME_GOOGLE_DRIVE,
-                            new MenuMetadata(CloudHandler.CLOUD_PREFIX_GOOGLE_DRIVE + "/"),
-                            R.drawable.ic_google_drive_white_24dp, R.drawable.ic_edit_24dp);
-
-                    accountAuthenticationList.add(new String[] {
-                            CloudHandler.CLOUD_NAME_GOOGLE_DRIVE,
-                            CloudHandler.CLOUD_PREFIX_GOOGLE_DRIVE + "/",
-                    });
-                }
-            }
-            Collections.sort(accountAuthenticationList, new BookSorter());
-        }
 
         if (mainActivity.getBoolean(PREFERENCE_SHOW_SIDEBAR_FOLDERS)) {
             if (dataUtils.getBooks().size() > 0) {
@@ -527,13 +477,7 @@ public class Drawer implements NavigationView.OnNavigationItemSelectedListener {
                     FileUtils.checkForPath(mainActivity, meta.path, mainActivity.isRootExplorer());
                 }
 
-                if (dataUtils.getAccounts().size() > 0 && (meta.path.startsWith(CloudHandler.CLOUD_PREFIX_BOX) ||
-                        meta.path.startsWith(CloudHandler.CLOUD_PREFIX_DROPBOX) ||
-                        meta.path.startsWith(CloudHandler.CLOUD_PREFIX_ONE_DRIVE) ||
-                        meta.path.startsWith(CloudHandler.CLOUD_PREFIX_GOOGLE_DRIVE))) {
-                    // we have cloud accounts, try see if token is expired or not
-                    CloudUtil.checkToken(meta.path, mainActivity);
-                }
+
 
                 pendingPath = meta.path;
 
@@ -583,14 +527,6 @@ public class Drawer implements NavigationView.OnNavigationItemSelectedListener {
                     mainActivity.showSMBDialog(title, path, true);
                 } else if (path.startsWith("ssh:/")) {
                     mainActivity.showSftpDialog(title, path, true);
-                } else if (path.startsWith(CloudHandler.CLOUD_PREFIX_DROPBOX)) {
-                    GeneralDialogCreation.showCloudDialog(mainActivity, mainActivity.getAppTheme(), OpenMode.DROPBOX);
-                } else if (path.startsWith(CloudHandler.CLOUD_PREFIX_GOOGLE_DRIVE)) {
-                    GeneralDialogCreation.showCloudDialog(mainActivity, mainActivity.getAppTheme(), OpenMode.GDRIVE);
-                } else if (path.startsWith(CloudHandler.CLOUD_PREFIX_BOX)) {
-                    GeneralDialogCreation.showCloudDialog(mainActivity, mainActivity.getAppTheme(), OpenMode.BOX);
-                } else if (path.startsWith(CloudHandler.CLOUD_PREFIX_ONE_DRIVE)) {
-                    GeneralDialogCreation.showCloudDialog(mainActivity, mainActivity.getAppTheme(), OpenMode.ONEDRIVE);
                 }
         }
     }

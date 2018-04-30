@@ -14,7 +14,7 @@ import com.efm.filemanager.filesystem.RootHelper;
 import java.util.ArrayList;
 
 /**
- * Created by Vishal on 27-04-2017.
+ * Created by Khanh Linh <nho89vh@gmail.com>  on 27-04-2017.
  */
 
 public class OTGUtil {

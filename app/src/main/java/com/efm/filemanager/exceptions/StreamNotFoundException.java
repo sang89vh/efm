@@ -1,7 +1,7 @@
 package com.efm.filemanager.exceptions;
 
 /**
- * Created by vishal on 21/1/17.
+ * Created by Khanh Linh <nho89vh@gmail.com>  on 21/1/17.
  *
  * Exception thrown when we can't get stream after trying any specific methods
  */

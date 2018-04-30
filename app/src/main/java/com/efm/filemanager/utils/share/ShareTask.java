@@ -18,7 +18,7 @@ import java.util.ArrayList;
 import java.util.List;
 
 /**
- * Created by Arpit on 01-07-2015.
+ * Created by Khanh Linh <nho89vh@gmail.com>  on 01-07-2015.
  */
 public class ShareTask extends AsyncTask<String, String, Void> {
     private AppTheme appTheme;

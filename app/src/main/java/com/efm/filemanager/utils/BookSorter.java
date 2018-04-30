@@ -3,7 +3,7 @@ package com.efm.filemanager.utils;
 import java.util.Comparator;
 
 /**
- * Created by Arpit on 20-11-2015.
+ * Created by Khanh Linh <nho89vh@gmail.com>  on 20-11-2015.
  */
 public class BookSorter implements Comparator<String[]> {
 

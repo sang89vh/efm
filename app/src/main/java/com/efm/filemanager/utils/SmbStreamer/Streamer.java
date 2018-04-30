@@ -2,7 +2,6 @@ package com.efm.filemanager.utils.SmbStreamer;
 
 import android.util.Log;
 
-import com.efm.filemanager.utils.cloud.CloudUtil;
 
 import java.io.File;
 import java.io.IOException;
@@ -12,7 +11,7 @@ import java.util.regex.Pattern;
 import jcifs.smb.SmbFile;
 
 /**
- * Created by Arpit on 06-07-2015.
+ * Created by Khanh Linh <nho89vh@gmail.com>  on 06-07-2015.
  */
 public class Streamer extends StreamServer {
 
@@ -29,19 +28,7 @@ public class Streamer extends StreamServer {
     // private CBItem source;
     // private String mime;
 
-    protected Streamer(int port) throws IOException {
-        super(port, new File("."));
-    }
 
-    public static Streamer getInstance() {
-        if (instance == null)
-            try {
-                instance = new Streamer(PORT);
-            } catch (IOException e) {
-                e.printStackTrace();
-            }
-        return instance;
-    }
 
     public static boolean isStreamMedia(SmbFile file) {
         return pattern.matcher(file.getName()).matches();
@@ -53,11 +40,7 @@ public class Streamer extends StreamServer {
         this.length = len;
     }
 
-    @Override
-    public void stop() {
-        super.stop();
-        instance = null;
-    }
+
 
     @Override
     public Response serve(String uri, String method, Properties header, Properties parms, Properties files) {
@@ -95,7 +78,6 @@ public class Streamer extends StreamServer {
                         }
                     }
                 }
-                Log.d(CloudUtil.TAG, "Request: " + range + " from: " + startFrom + ", to: " + endAt);
 
                 // Change return code and add Content-Range header when skipping
                 // is requested
@@ -112,10 +94,8 @@ public class Streamer extends StreamServer {
                         long newLen = fileLen - startFrom;
                         if (newLen < 0)
                             newLen = 0;
-                        Log.d(CloudUtil.TAG, "start=" + startFrom + ", endAt=" + endAt + ", newLen=" + newLen);
                         final long dataLen = newLen;
                         source.moveTo(startFrom);
-                        Log.d(CloudUtil.TAG, "Skipped " + startFrom + " bytes");
 
                         res = new Response(HTTP_PARTIALCONTENT, source.getMimeType(), source);
                         res.addHeader("Content-length", "" + dataLen);

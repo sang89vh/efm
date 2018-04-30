@@ -8,7 +8,7 @@ import android.util.DisplayMetrics;
 import com.efm.filemanager.utils.theme.AppTheme;
 
 /**
- * Created by vishal on 30/5/16.
+ * Created by Khanh Linh <nho89vh@gmail.com>  on 30/5/16.
  * Class used to create background of check icon on selection with
  * a Custom {@link Color} and Stroke (boundary)
  */

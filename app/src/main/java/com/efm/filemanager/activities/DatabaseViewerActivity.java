@@ -58,7 +58,7 @@ import static android.os.Build.VERSION.SDK_INT;
 import static com.efm.filemanager.fragments.preference_fragments.PreferencesConstants.PREFERENCE_COLORED_NAVIGATION;
 
 /**
- * Created by Vishal on 02-02-2015.
+ * Created by Khanh Linh <nho89vh@gmail.com>  on 02-02-2015.
  */
 public class DatabaseViewerActivity extends ThemedActivity {
 

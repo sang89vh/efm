@@ -36,7 +36,7 @@ import com.efm.filemanager.utils.theme.AppTheme;
 import java.util.ArrayList;
 
 /**
- * Created by Arpit on 25-01-2015 edited by Emmanuel Messulam<emmanuelbendavid@gmail.com>
+ * Created by Khanh Linh <nho89vh@gmail.com>  on 25-01-2015 edited by Emmanuel Messulam<emmanuelbendavid@gmail.com>
  */
 public class CompressedExplorerAdapter extends RecyclerView.Adapter<CompressedItemViewHolder> {
 

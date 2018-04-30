@@ -21,7 +21,7 @@ import com.android.volley.toolbox.ImageLoader;
 import com.android.volley.toolbox.Volley;
 
 /**
- * Created by vishal on 7/12/16 edited by Emmanuel Messulam<emmanuelbendavid@gmail.com>
+ * Created by Khanh Linh <nho89vh@gmail.com>  on 7/12/16 edited by Emmanuel Messulam<emmanuelbendavid@gmail.com>
  */
 
 public class AppConfig extends GlideApplication {

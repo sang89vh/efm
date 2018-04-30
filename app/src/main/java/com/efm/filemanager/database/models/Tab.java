@@ -1,5 +1,5 @@
 /*
- * Copyright (C) 2018 Emmanuel Messulam <emmanuelbendavid@gmail.com>
+ * Copyright (C) 2018 Khanh Linh <nho89vh@gmail.com>
  * Copyright (C) 2014 Khanh Linh <nho89vh@gmail.com>>
  *
  * This file is part of efm File Manager.
@@ -25,7 +25,7 @@ import android.content.SharedPreferences;
 import com.efm.filemanager.utils.files.FileUtils;
 
 /**
- * Created by Vishal on 9/17/2014
+ * Created by Khanh Linh <nho89vh@gmail.com>  on 9/17/2014
  */
 public class Tab {
     public final int tabNumber;

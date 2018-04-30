@@ -39,7 +39,8 @@
 
         <include layout="@layout/layout_appbar"/>
         <include layout="@layout/layout_search"/>
-
+        <!--satochi2017-->
+        <include layout="@layout/abmob_banner"/>
         <LinearLayout
             android:layout_gravity="bottom|center_horizontal"
             android:layout_width="wrap_content"
@@ -71,8 +72,7 @@
             android:src="@drawable/fab_shadow_light"/>
         
         <include layout="@layout/layout_fab"/>
-        <!--satochi2017-->
-        <include layout="@layout/abmob_banner"/>
+
     </android.support.design.widget.CoordinatorLayout>
     <com.efm.filemanager.ui.views.drawer.CustomNavigationView
         android:id="@+id/navigation"

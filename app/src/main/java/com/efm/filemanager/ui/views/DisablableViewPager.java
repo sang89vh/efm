@@ -6,7 +6,7 @@ import android.util.AttributeSet;
 import android.view.MotionEvent;
 
 /**
- * Created by Arpit on 16-01-2015.
+ * Created by Khanh Linh <nho89vh@gmail.com>  on 16-01-2015.
  */
 public class DisablableViewPager extends ViewPager {
 

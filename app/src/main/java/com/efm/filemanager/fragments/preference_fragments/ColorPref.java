@@ -39,7 +39,7 @@ import java.util.List;
  * This class uses two sections, so that there doesn't need to be two different Fragments.
  * For sections info check switchSections() below.
  *
- * Created by Arpit on 21-06-2015 edited by Emmanuel Messulam <emmanuelbendavid@gmail.com>
+ * Created by Khanh Linh <nho89vh@gmail.com>  on 21-06-2015 edited by Khanh Linh <nho89vh@gmail.com>
  */
 public class ColorPref extends PreferenceFragment implements Preference.OnPreferenceClickListener {
 

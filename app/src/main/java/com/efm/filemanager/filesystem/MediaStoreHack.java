@@ -1,7 +1,7 @@
 package com.efm.filemanager.filesystem;
 
 /**
- * Created by Arpit on 29-06-2015.
+ * Created by Khanh Linh <nho89vh@gmail.com>  on 29-06-2015.
  */
 import android.content.ContentResolver;
 import android.content.ContentValues;

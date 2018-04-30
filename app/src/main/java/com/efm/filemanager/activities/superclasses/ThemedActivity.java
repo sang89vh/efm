@@ -18,7 +18,7 @@ import com.efm.filemanager.utils.theme.AppTheme;
 import static com.efm.filemanager.fragments.preference_fragments.PreferencesConstants.PREFERENCE_ROOTMODE;
 
 /**
- * Created by arpitkh996 on 03-03-2016.
+ * Created by Khanh Linh <nho89vh@gmail.com> kh996 on 03-03-2016.
  */
 public class ThemedActivity extends PreferenceActivity {
 

@@ -20,7 +20,7 @@ import com.efm.filemanager.utils.ServiceWatcherUtil;
 import java.util.ArrayList;
 
 /**
- * @author Emmanuel Messulam <emmanuelbendavid@gmail.com>
+ * @author Khanh Linh <nho89vh@gmail.com>
  *         on 28/11/2017, at 19:32.
  */
 

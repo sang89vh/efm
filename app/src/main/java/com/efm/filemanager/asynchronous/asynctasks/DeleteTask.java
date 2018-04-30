@@ -40,11 +40,8 @@ import com.efm.filemanager.fragments.preference_fragments.PreferencesConstants;
 import com.efm.filemanager.ui.notifications.NotificationConstants;
 import com.efm.filemanager.utils.DataUtils;
 import com.efm.filemanager.utils.OTGUtil;
-import com.efm.filemanager.utils.OpenMode;
-import com.efm.filemanager.utils.cloud.CloudUtil;
 import com.efm.filemanager.utils.files.CryptUtil;
 import com.efm.filemanager.utils.files.FileUtils;
-import com.cloudrail.si.interfaces.CloudStorage;
 
 import java.util.ArrayList;
 
@@ -82,50 +79,6 @@ public class DeleteTask extends AsyncTask<ArrayList<HybridFileParcelable>, Strin
             for (HybridFileParcelable file : files) {
                 DocumentFile documentFile = OTGUtil.getDocumentFile(file.getPath(), cd, false);
                 wasDeleted = documentFile.delete();
-            }
-        } else if (files.get(0).isDropBoxFile()) {
-            CloudStorage cloudStorageDropbox = dataUtils.getAccount(OpenMode.DROPBOX);
-            for (HybridFileParcelable baseFile : files) {
-                try {
-                    cloudStorageDropbox.delete(CloudUtil.stripPath(OpenMode.DROPBOX, baseFile.getPath()));
-                } catch (Exception e) {
-                    e.printStackTrace();
-                    wasDeleted = false;
-                    break;
-                }
-            }
-        } else if (files.get(0).isBoxFile()) {
-            CloudStorage cloudStorageBox = dataUtils.getAccount(OpenMode.BOX);
-            for (HybridFileParcelable baseFile : files) {
-                try {
-                    cloudStorageBox.delete(CloudUtil.stripPath(OpenMode.BOX, baseFile.getPath()));
-                } catch (Exception e) {
-                    e.printStackTrace();
-                    wasDeleted = false;
-                    break;
-                }
-            }
-        } else if (files.get(0).isGoogleDriveFile()) {
-            CloudStorage cloudStorageGdrive = dataUtils.getAccount(OpenMode.GDRIVE);
-            for (HybridFileParcelable baseFile : files) {
-                try {
-                    cloudStorageGdrive.delete(CloudUtil.stripPath(OpenMode.GDRIVE, baseFile.getPath()));
-                } catch (Exception e) {
-                    e.printStackTrace();
-                    wasDeleted = false;
-                    break;
-                }
-            }
-        } else if (files.get(0).isOneDriveFile()) {
-            CloudStorage cloudStorageOnedrive = dataUtils.getAccount(OpenMode.ONEDRIVE);
-            for (HybridFileParcelable baseFile : files) {
-                try {
-                    cloudStorageOnedrive.delete(CloudUtil.stripPath(OpenMode.ONEDRIVE, baseFile.getPath()));
-                } catch (Exception e) {
-                    e.printStackTrace();
-                    wasDeleted = false;
-                    break;
-                }
             }
         } else {
             for(HybridFileParcelable file : files) {

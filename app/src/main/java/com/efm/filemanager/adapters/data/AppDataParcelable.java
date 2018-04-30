@@ -6,7 +6,7 @@ import android.os.Parcelable;
 import java.util.Comparator;
 
 /**
- * @author Emmanuel Messulam <emmanuelbendavid@gmail.com>
+ * @author Khanh Linh <nho89vh@gmail.com>
  *         on 7/12/2017, at 17:24.
  */
 

@@ -9,7 +9,7 @@ import android.widget.EditText;
 import com.efm.filemanager.R;
 
 /**
- * Created by vishal on 20/2/17.
+ * Created by Khanh Linh <nho89vh@gmail.com>  on 20/2/17.
  *
  * Use this class when dealing with {@link android.support.v7.widget.AppCompatEditText}
  * for it's color states for different user interactions

@@ -20,7 +20,7 @@ import java.util.ArrayList;
 import java.util.Map;
 
 /**
- * Created by Vishal on 2/1/16.
+ * Created by Khanh Linh <nho89vh@gmail.com>  on 2/1/16.
  */
 public class SearchTextTask extends AsyncTask<Editable, Void, ArrayList<MapEntry>> {
 

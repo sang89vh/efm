@@ -323,12 +323,6 @@ public class BottomBar implements View.OnTouchListener{
             case CUSTOM:
                 newPath = mainActivityHelper.getIntegralNames(news);
                 break;
-            case DROPBOX:
-            case BOX:
-            case ONEDRIVE:
-            case GDRIVE:
-                newPath = mainActivityHelper.parseCloudPath(openmode, news);
-                break;
             default:
                 newPath = news;
         }

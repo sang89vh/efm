@@ -31,7 +31,7 @@ import java.util.ArrayList;
 import java.util.List;
 
 /**
- * Created by Vishal on 9/17/2014.
+ * Created by Khanh Linh <nho89vh@gmail.com>  on 9/17/2014.
  */
 public class TabHandler extends SQLiteOpenHelper {
 
@@ -71,22 +71,16 @@ public class TabHandler extends SQLiteOpenHelper {
                 + COLUMN_ENCRYPTED_PASSWORD + " TEXT"
                 + ")";
 
-        String CREATE_TABLE_CLOUD = "CREATE TABLE " + CloudHandler.TABLE_CLOUD_PERSIST + "("
-                + CloudHandler.COLUMN_CLOUD_ID
-                + " INTEGER PRIMARY KEY,"
-                + CloudHandler.COLUMN_CLOUD_SERVICE + " INTEGER,"
-                + CloudHandler.COLUMN_CLOUD_PERSIST + " TEXT" + ")";
+
 
         db.execSQL(CREATE_TAB_TABLE);
         db.execSQL(CREATE_TABLE_ENCRYPTED);
-        db.execSQL(CREATE_TABLE_CLOUD);
     }
 
     @Override
     public void onUpgrade(SQLiteDatabase sqLiteDatabase, int i, int i2) {
         sqLiteDatabase.execSQL("DROP TABLE IF EXISTS " + TABLE_TAB);
         sqLiteDatabase.execSQL("DROP TABLE IF EXISTS " + TABLE_ENCRYPTED);
-        sqLiteDatabase.execSQL("DROP TABLE IF EXISTS " + CloudHandler.TABLE_CLOUD_PERSIST);
         onCreate(sqLiteDatabase);
     }
 

@@ -3,7 +3,7 @@ package com.efm.filemanager.utils;
 import com.efm.filemanager.fragments.ProcessViewerFragment;
 
 /**
- * Created by arpitkh96 on 18/8/16.
+ * Created by Khanh Linh <nho89vh@gmail.com> kh96 on 18/8/16.
  *
  * Base class to handle progress of services operation
  * Utilized for generation of notification,

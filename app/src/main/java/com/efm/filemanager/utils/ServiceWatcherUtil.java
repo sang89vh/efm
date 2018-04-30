@@ -1,7 +1,7 @@
 package com.efm.filemanager.utils;
 
 /**
- * Created by vishal on 4/1/17.
+ * Created by Khanh Linh <nho89vh@gmail.com>  on 4/1/17.
  *
  * Helper class providing helper methods to manage Service startup and it's progress
  * Be advised - this class can only handle progress with one object at a time. Hence, class also provides

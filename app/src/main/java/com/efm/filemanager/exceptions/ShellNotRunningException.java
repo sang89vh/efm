@@ -1,7 +1,7 @@
 package com.efm.filemanager.exceptions;
 
 /**
- * Created by vishal on 24/12/16.
+ * Created by Khanh Linh <nho89vh@gmail.com>  on 24/12/16.
  * Exception thrown when root is
  */
 

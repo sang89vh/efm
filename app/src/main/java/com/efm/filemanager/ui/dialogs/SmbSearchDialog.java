@@ -29,7 +29,7 @@ import java.util.ArrayList;
 import java.util.List;
 
 /**
- * Created by arpitkh996 on 16-01-2016 edited by Emmanuel Messulam <emmanuelbendavid@gmail.com>
+ * Created by Khanh Linh <nho89vh@gmail.com> kh996 on 16-01-2016 edited by Khanh Linh <nho89vh@gmail.com>
  */
 public class SmbSearchDialog extends DialogFragment {
     private UtilitiesProvider utilsProvider;

@@ -7,8 +7,8 @@ import com.efm.filemanager.asynchronous.services.AbstractProgressiveService;
 import com.efm.filemanager.fragments.ProcessViewerFragment;
 
 /**
- * Created by Arpit on 01-08-2015
- *      edited by Emmanuel Messulam <emmanuelbendavid@gmail.com>
+ * Created by Khanh Linh <nho89vh@gmail.com>  on 01-08-2015
+ *      edited by Khanh Linh <nho89vh@gmail.com>
  *
  * Class stores the {@link AbstractProgressiveService} progress variables.
  * This class also acts as data carrier to communicate with {@link ProcessViewerFragment}

@@ -66,7 +66,7 @@ import static com.efm.filemanager.fragments.preference_fragments.PreferencesCons
  * The showPopup shows the file's popup menu.
  * The 'go to parent' aka '..' button (go to settings to activate it) is just a folder.
  *
- * Created by Arpit on 11-04-2015 edited by Emmanuel Messulam <emmanuelbendavid@gmail.com>
+ * Created by Khanh Linh <nho89vh@gmail.com>  on 11-04-2015 edited by Khanh Linh <nho89vh@gmail.com>
  *                                edited by Jens Klingenberg <mail@jensklingenberg.de>
  */
 public class RecyclerAdapter extends RecyclerView.Adapter<RecyclerView.ViewHolder>

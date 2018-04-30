@@ -80,12 +80,6 @@ public class ItemPopupMenu extends PopupMenu implements PopupMenu.OnMenuItemClic
                 return true;
             case R.id.share:
                 switch (rowItem.getMode()) {
-                    case DROPBOX:
-                    case BOX:
-                    case GDRIVE:
-                    case ONEDRIVE:
-                        FileUtils.shareCloudFile(rowItem.desc, rowItem.getMode(), context);
-                        break;
                     default:
                         ArrayList<File> arrayList = new ArrayList<>();
                         arrayList.add(new File(rowItem.desc));

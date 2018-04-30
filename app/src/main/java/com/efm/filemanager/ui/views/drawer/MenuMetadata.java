@@ -1,7 +1,7 @@
 package com.efm.filemanager.ui.views.drawer;
 
 /**
- * @author Emmanuel Messulam <emmanuelbendavid@gmail.com>
+ * @author Khanh Linh <nho89vh@gmail.com>
  *         on 28/12/2017, at 18:01.
  */
 

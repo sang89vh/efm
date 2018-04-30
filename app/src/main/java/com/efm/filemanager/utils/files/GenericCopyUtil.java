@@ -12,10 +12,7 @@ import com.efm.filemanager.utils.application.AppConfig;
 import com.efm.filemanager.filesystem.HybridFile;
 import com.efm.filemanager.utils.DataUtils;
 import com.efm.filemanager.utils.OTGUtil;
-import com.efm.filemanager.utils.OpenMode;
 import com.efm.filemanager.utils.ServiceWatcherUtil;
-import com.efm.filemanager.utils.cloud.CloudUtil;
-import com.cloudrail.si.interfaces.CloudStorage;
 
 import java.io.BufferedInputStream;
 import java.io.BufferedOutputStream;
@@ -31,7 +28,7 @@ import java.nio.channels.FileChannel;
 import java.nio.channels.ReadableByteChannel;
 
 /**
- * Created by vishal on 26/10/16.
+ * Created by Khanh Linh <nho89vh@gmail.com>  on 26/10/16.
  *
  * Base class to handle file copy.
  */
@@ -52,7 +49,7 @@ public class GenericCopyUtil {
 
     /**
      * Starts copy of file
-     * Supports : {@link File}, {@link jcifs.smb.SmbFile}, {@link DocumentFile}, {@link CloudStorage}
+     * Supports : {@link File}, {@link jcifs.smb.SmbFile}, {@link DocumentFile},
      * @param lowOnMemory defines whether system is running low on memory, in which case we'll switch to
      *                    using streams instead of channel which maps the who buffer in memory.
      *                    TODO: Use buffers even on low memory but don't map the whole file to memory but
@@ -85,30 +82,6 @@ public class GenericCopyUtil {
                 bufferedInputStream = new BufferedInputStream(mSourceFile.getInputStream(), DEFAULT_BUFFER_SIZE);
             } else if (mSourceFile.isSftp()) {
                 bufferedInputStream = new BufferedInputStream(mSourceFile.getInputStream(mContext), DEFAULT_BUFFER_SIZE);
-            } else if (mSourceFile.isDropBoxFile()) {
-
-                CloudStorage cloudStorageDropbox = dataUtils.getAccount(OpenMode.DROPBOX);
-                bufferedInputStream = new BufferedInputStream(cloudStorageDropbox
-                        .download(CloudUtil.stripPath(OpenMode.DROPBOX,
-                                mSourceFile.getPath())));
-            } else if (mSourceFile.isBoxFile()) {
-
-                CloudStorage cloudStorageBox = dataUtils.getAccount(OpenMode.BOX);
-                bufferedInputStream = new BufferedInputStream(cloudStorageBox
-                        .download(CloudUtil.stripPath(OpenMode.BOX,
-                                mSourceFile.getPath())));
-            } else if (mSourceFile.isGoogleDriveFile()) {
-
-                CloudStorage cloudStorageGdrive = dataUtils.getAccount(OpenMode.GDRIVE);
-                bufferedInputStream = new BufferedInputStream(cloudStorageGdrive
-                        .download(CloudUtil.stripPath(OpenMode.GDRIVE,
-                                mSourceFile.getPath())));
-            } else if (mSourceFile.isOneDriveFile()) {
-
-                CloudStorage cloudStorageOnedrive = dataUtils.getAccount(OpenMode.ONEDRIVE);
-                bufferedInputStream = new BufferedInputStream(cloudStorageOnedrive
-                        .download(CloudUtil.stripPath(OpenMode.ONEDRIVE,
-                                mSourceFile.getPath())));
             } else {
 
                 // source file is neither smb nor otg; getting a channel from direct file instead of stream
@@ -152,66 +125,6 @@ public class GenericCopyUtil {
             } else if (mTargetFile.isSmb()) {
 
                 bufferedOutputStream = new BufferedOutputStream(mTargetFile.getOutputStream(mContext), DEFAULT_BUFFER_SIZE);
-            } else if (mTargetFile.isDropBoxFile()) {
-                // API doesn't support output stream, we'll upload the file directly
-                CloudStorage cloudStorageDropbox = dataUtils.getAccount(OpenMode.DROPBOX);
-
-                if (mSourceFile.isDropBoxFile()) {
-                    // we're in the same provider, use api method
-                    cloudStorageDropbox.copy(CloudUtil.stripPath(OpenMode.DROPBOX, mSourceFile.getPath()),
-                            CloudUtil.stripPath(OpenMode.DROPBOX, mTargetFile.getPath()));
-                    return;
-                } else {
-                    cloudStorageDropbox.upload(CloudUtil.stripPath(OpenMode.DROPBOX, mTargetFile.getPath()),
-                            bufferedInputStream, mSourceFile.getSize(), true);
-                    return;
-                }
-            } else if (mTargetFile.isBoxFile()) {
-                // API doesn't support output stream, we'll upload the file directly
-                CloudStorage cloudStorageBox = dataUtils.getAccount(OpenMode.BOX);
-
-                if (mSourceFile.isBoxFile()) {
-                    // we're in the same provider, use api method
-                    cloudStorageBox.copy(CloudUtil.stripPath(OpenMode.BOX, mSourceFile.getPath()),
-                            CloudUtil.stripPath(OpenMode.BOX, mTargetFile.getPath()));
-                    return;
-                } else {
-                    cloudStorageBox.upload(CloudUtil.stripPath(OpenMode.BOX, mTargetFile.getPath()),
-                            bufferedInputStream, mSourceFile.getSize(), true);
-                    bufferedInputStream.close();
-                    return;
-                }
-            } else if (mTargetFile.isGoogleDriveFile()) {
-                // API doesn't support output stream, we'll upload the file directly
-                CloudStorage cloudStorageGdrive = dataUtils.getAccount(OpenMode.GDRIVE);
-
-
-                if (mSourceFile.isGoogleDriveFile()) {
-                    // we're in the same provider, use api method
-                    cloudStorageGdrive.copy(CloudUtil.stripPath(OpenMode.GDRIVE, mSourceFile.getPath()),
-                            CloudUtil.stripPath(OpenMode.GDRIVE, mTargetFile.getPath()));
-                    return;
-                } else {
-                    cloudStorageGdrive.upload(CloudUtil.stripPath(OpenMode.GDRIVE, mTargetFile.getPath()),
-                            bufferedInputStream, mSourceFile.getSize(), true);
-                    bufferedInputStream.close();
-                    return;
-                }
-            } else if (mTargetFile.isOneDriveFile()) {
-                // API doesn't support output stream, we'll upload the file directly
-                CloudStorage cloudStorageOnedrive = dataUtils.getAccount(OpenMode.ONEDRIVE);
-
-                if (mSourceFile.isOneDriveFile()) {
-                    // we're in the same provider, use api method
-                    cloudStorageOnedrive.copy(CloudUtil.stripPath(OpenMode.ONEDRIVE, mSourceFile.getPath()),
-                            CloudUtil.stripPath(OpenMode.ONEDRIVE, mTargetFile.getPath()));
-                    return;
-                } else {
-                    cloudStorageOnedrive.upload(CloudUtil.stripPath(OpenMode.ONEDRIVE, mTargetFile.getPath()),
-                            bufferedInputStream, mSourceFile.getSize(), true);
-                    bufferedInputStream.close();
-                    return;
-                }
             } else {
                 // copying normal file, target not in OTG
                 File file = new File(mTargetFile.getPath());

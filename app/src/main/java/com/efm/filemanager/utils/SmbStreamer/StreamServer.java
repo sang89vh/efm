@@ -1,14 +1,12 @@
 package com.efm.filemanager.utils.SmbStreamer;
 
 /**
- * Created by Arpit on 06-07-2015.
+ * Created by Khanh Linh <nho89vh@gmail.com>  on 06-07-2015.
  */
 
 import android.net.Uri;
 import android.util.Log;
 
-import com.efm.filemanager.utils.cloud.CloudStreamer;
-import com.efm.filemanager.utils.cloud.CloudUtil;
 
 import java.io.BufferedReader;
 import java.io.ByteArrayInputStream;
@@ -159,63 +157,10 @@ public abstract class StreamServer {
             MIME_DEFAULT_BINARY = "application/octet-stream",
             MIME_XML = "text/xml";
 
-    // ==================================================
-    // Socket & server code
-    // ==================================================
-
-    /**
-     * Starts a HTTP server to given port.<p>
-     * Throws an IOException if the socket is already in use
-     */
-
-    //private HTTPSession session;
-    public StreamServer( int port, File wwwroot ) throws IOException {
-        myTcpPort = port;
-        this.myRootDir = wwwroot;
-        myServerSocket = tryBind(myTcpPort);
-        myThread = new Thread(() -> {
-            try {
-                while (true) {
-                    Socket accept = myServerSocket.accept();
-                    new HTTPSession(accept);
-                }
-            } catch (IOException ioe) {
-            }
-        });
-        myThread.setDaemon( true );
-        myThread.start();
-    }
 
 
-    /**
-     * Stops the server.
-     */
-    public void stop() {
-        try {
-            myServerSocket.close();
-            myThread.join();
-        } catch (IOException | InterruptedException e) {
-        }
-    }
 
-    /**
-     * Since CloudStreamServer and Streamer both uses the same port, shutdown the CloudStreamer before
-     * acquiring the port.
-     *
-     * @param port
-     * @return ServerSocket
-     * @throws IOException
-     */
-    private ServerSocket tryBind(int port) throws IOException {
-        ServerSocket socket;
-        try {
-            socket = new ServerSocket(port);
-        } catch (BindException ifPortIsOccupiedByCloudStreamer) {
-            CloudStreamer.getInstance().stop();
-            socket = new ServerSocket(port);
-        }
-        return socket;
-    }
+
 
     /**
      * Handles one session, i.e. parses the HTTP request
@@ -272,9 +217,6 @@ public abstract class StreamServer {
 
                 // Decode the header into parms and header java properties
                 decodeHeader(hin, pre, parms, header);
-                Log.d(CloudUtil.TAG, pre.toString());
-                Log.d(CloudUtil.TAG, "Params: " + parms.toString());
-                Log.d(CloudUtil.TAG, "Header: " + header.toString());
                 String method = pre.getProperty("method");
                 String uri = pre.getProperty("uri");
 
@@ -692,7 +634,6 @@ public abstract class StreamServer {
     }
 
     private int myTcpPort;
-    private final ServerSocket myServerSocket;
     private Thread myThread;
     private File myRootDir;
 

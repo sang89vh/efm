@@ -1,7 +1,7 @@
 /* Diego Felipe Lassa <diegoflassa@gmail.com>
  *
  * Copyright (C) 2014 satochi2017 <satochi2017@gmail.com>, Khanh Linh <nho89vh@gmail.com>>,
- *                          Emmanuel Messulam <emmanuelbendavid@gmail.com>, Jens Klingenberg <mail@jensklingenberg.de>
+ *                          Khanh Linh <nho89vh@gmail.com>, Jens Klingenberg <mail@jensklingenberg.de>
  *
  * This file is part of efm File Manager.
  *
@@ -68,14 +68,12 @@ import android.widget.Toast;
 import com.afollestad.materialdialogs.MaterialDialog;
 import com.efm.filemanager.R;
 import com.efm.filemanager.activities.MainActivity;
-import com.efm.filemanager.activities.PreferencesActivity;
 import com.efm.filemanager.activities.superclasses.ThemedActivity;
 import com.efm.filemanager.adapters.RecyclerAdapter;
 import com.efm.filemanager.adapters.data.LayoutElementParcelable;
 import com.efm.filemanager.asynchronous.asynctasks.DeleteTask;
 import com.efm.filemanager.asynchronous.asynctasks.LoadFilesListTask;
 import com.efm.filemanager.asynchronous.handlers.FileHandler;
-import com.efm.filemanager.database.CloudHandler;
 import com.efm.filemanager.database.CryptHandler;
 import com.efm.filemanager.database.models.EncryptedEntry;
 import com.efm.filemanager.database.models.Tab;
@@ -85,7 +83,6 @@ import com.efm.filemanager.filesystem.HybridFileParcelable;
 import com.efm.filemanager.filesystem.MediaStoreHack;
 import com.efm.filemanager.filesystem.PasteHelper;
 import com.efm.filemanager.filesystem.ssh.SshClientUtils;
-import com.efm.filemanager.fragments.preference_fragments.PreferencesConstants;
 import com.efm.filemanager.ui.dialogs.GeneralDialogCreation;
 import com.efm.filemanager.ui.icons.MimeTypes;
 import com.efm.filemanager.ui.views.DividerItemDecoration;
@@ -98,7 +95,6 @@ import com.efm.filemanager.utils.OTGUtil;
 import com.efm.filemanager.utils.OpenMode;
 import com.efm.filemanager.utils.SmbStreamer.Streamer;
 import com.efm.filemanager.utils.Utils;
-import com.efm.filemanager.utils.cloud.CloudUtil;
 import com.efm.filemanager.utils.color.ColorUsage;
 import com.efm.filemanager.utils.files.CryptUtil;
 import com.efm.filemanager.utils.files.EncryptDecryptUtils;
@@ -119,12 +115,7 @@ import jcifs.smb.SmbFile;
 
 import static com.efm.filemanager.fragments.preference_fragments.PreferencesConstants.*;
 import static com.efm.filemanager.fragments.preference_fragments.PreferencesConstants.PREFERENCE_SHOW_DIVIDERS;
-import static com.efm.filemanager.fragments.preference_fragments.PreferencesConstants.PREFERENCE_SHOW_FILE_SIZE;
 import static com.efm.filemanager.fragments.preference_fragments.PreferencesConstants.PREFERENCE_SHOW_GOBACK_BUTTON;
-import static com.efm.filemanager.fragments.preference_fragments.PreferencesConstants.PREFERENCE_SHOW_HEADERS;
-import static com.efm.filemanager.fragments.preference_fragments.PreferencesConstants.PREFERENCE_SHOW_LAST_MODIFIED;
-import static com.efm.filemanager.fragments.preference_fragments.PreferencesConstants.PREFERENCE_SHOW_PERMISSIONS;
-import static com.efm.filemanager.fragments.preference_fragments.PreferencesConstants.PREFERENCE_USE_CIRCULAR_IMAGES;
 
 public class MainFragment extends android.support.v4.app.Fragment implements BottomBarButtonPath {
 
@@ -664,13 +655,6 @@ public class MainFragment extends android.support.v4.app.Fragment implements Bot
                     else {
 
                         switch (LIST_ELEMENTS.get(0).getMode()) {
-                            case DROPBOX:
-                            case BOX:
-                            case GDRIVE:
-                            case ONEDRIVE:
-                                FileUtils.shareCloudFile(LIST_ELEMENTS.get(0).desc,
-                                        LIST_ELEMENTS.get(0).getMode(), getContext());
-                                break;
                             default:
                                 FileUtils.shareFiles(arrayList, getActivity(), utilsProvider.getAppTheme(), accentColor);
                                 break;
@@ -916,13 +900,6 @@ public class MainFragment extends android.support.v4.app.Fragment implements Bot
                                 FileUtils.openFile(OTGUtil.getDocumentFile(e.desc, getContext(), false),
                                         (MainActivity) getActivity(), sharedPref);
                                 break;
-                            case DROPBOX:
-                            case BOX:
-                            case GDRIVE:
-                            case ONEDRIVE:
-                                Toast.makeText(getContext(), getResources().getString(R.string.please_wait), Toast.LENGTH_LONG).show();
-                                CloudUtil.launchCloud(e.generateBaseFile(), openMode, getMainActivity());
-                                break;
                             default:
                                 FileUtils.openFile(new File(e.desc), (MainActivity) getActivity(), sharedPref);
                                 break;
@@ -1073,14 +1050,10 @@ public class MainFragment extends android.support.v4.app.Fragment implements Bot
 
     public void reloadListElements(boolean back, boolean results, boolean grid) {
         if (isAdded()) {
-            boolean isOtg = CURRENT_PATH.equals(OTGUtil.PREFIX_OTG + "/"),
-                    isOnTheCloud = CURRENT_PATH.equals(CloudHandler.CLOUD_PREFIX_GOOGLE_DRIVE + "/")
-                            || CURRENT_PATH.equals(CloudHandler.CLOUD_PREFIX_ONE_DRIVE + "/")
-                            || CURRENT_PATH.equals(CloudHandler.CLOUD_PREFIX_BOX + "/")
-                            || CURRENT_PATH.equals(CloudHandler.CLOUD_PREFIX_DROPBOX + "/");
+            boolean isOtg = CURRENT_PATH.equals(OTGUtil.PREFIX_OTG + "/");
 
             if (getBoolean(PREFERENCE_SHOW_GOBACK_BUTTON) && !CURRENT_PATH.equals("/")
-                    && (openMode == OpenMode.FILE || openMode == OpenMode.ROOT) && !isOtg && !isOnTheCloud
+                    && (openMode == OpenMode.FILE || openMode == OpenMode.ROOT) && !isOtg
                     && (LIST_ELEMENTS.size() == 0 || !LIST_ELEMENTS.get(0).size.equals(getString(R.string.goback)))) {
                 LIST_ELEMENTS.add(0, getBackElement());
             }
@@ -1279,10 +1252,7 @@ public class MainFragment extends android.support.v4.app.Fragment implements Bot
                             loadlist(currentFile.getParent(getContext()), true, openMode);
                     } else if (CURRENT_PATH.equals("/") || CURRENT_PATH.equals(home) ||
                             CURRENT_PATH.equals(OTGUtil.PREFIX_OTG + "/")
-                            || CURRENT_PATH.equals(CloudHandler.CLOUD_PREFIX_BOX + "/")
-                            || CURRENT_PATH.equals(CloudHandler.CLOUD_PREFIX_DROPBOX + "/")
-                            || CURRENT_PATH.equals(CloudHandler.CLOUD_PREFIX_GOOGLE_DRIVE + "/")
-                            || CURRENT_PATH.equals(CloudHandler.CLOUD_PREFIX_ONE_DRIVE + "/")
+
                             )
                         getMainActivity().exit();
                     else if (FileUtils.canGoBack(getContext(), currentFile)) {
@@ -1362,10 +1332,7 @@ public class MainFragment extends android.support.v4.app.Fragment implements Bot
                         e.printStackTrace();
                     }
                 } else if (CURRENT_PATH.equals("/") || CURRENT_PATH.equals(OTGUtil.PREFIX_OTG)
-                        || CURRENT_PATH.equals(CloudHandler.CLOUD_PREFIX_BOX + "/")
-                        || CURRENT_PATH.equals(CloudHandler.CLOUD_PREFIX_DROPBOX + "/")
-                        || CURRENT_PATH.equals(CloudHandler.CLOUD_PREFIX_GOOGLE_DRIVE + "/")
-                        || CURRENT_PATH.equals(CloudHandler.CLOUD_PREFIX_ONE_DRIVE + "/")) {
+                       ) {
                     getMainActivity().exit();
                 } else if (FileUtils.canGoBack(getContext(), currentFile)) {
                     loadlist(currentFile.getParent(getContext()), true, openMode);
@@ -1644,7 +1611,6 @@ public class MainFragment extends android.support.v4.app.Fragment implements Bot
     }
 
     public static void launchSMB(final HybridFileParcelable baseFile, final Activity activity) {
-        final Streamer s = Streamer.getInstance();
         new Thread() {
             public void run() {
                 try {
@@ -1658,7 +1624,6 @@ public class MainFragment extends android.support.v4.app.Fragment implements Bot
                     }
                     */
 
-                    s.setStreamSrc(new SmbFile(baseFile.getPath()), baseFile.getSize());
                     activity.runOnUiThread(() -> {
                         try {
                             Uri uri = Uri.parse(Streamer.URL + Uri.fromFile(new File(Uri.parse(baseFile.getPath()).getPath())).getEncodedPath());

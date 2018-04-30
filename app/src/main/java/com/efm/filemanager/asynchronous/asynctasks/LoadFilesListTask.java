@@ -1,6 +1,6 @@
 /*
  * Copyright (C) 2014 satochi2017 <satochi2017@gmail.com>, Khanh Linh <nho89vh@gmail.com>>
- *     Emmanuel Messulam <emmanuelbendavid@gmail.com>
+ *     Khanh Linh <nho89vh@gmail.com>
  *
  * This file is part of efm File Manager.
  *
@@ -28,13 +28,11 @@ import android.support.v4.util.Pair;
 import android.text.format.Formatter;
 
 import com.efm.filemanager.R;
-import com.efm.filemanager.activities.superclasses.ThemedActivity;
 import com.efm.filemanager.database.UtilsHandler;
 import com.efm.filemanager.exceptions.CloudPluginException;
 import com.efm.filemanager.filesystem.HybridFile;
 import com.efm.filemanager.filesystem.HybridFileParcelable;
 import com.efm.filemanager.filesystem.RootHelper;
-import com.efm.filemanager.fragments.CloudSheetFragment;
 import com.efm.filemanager.fragments.MainFragment;
 import com.efm.filemanager.adapters.data.LayoutElementParcelable;
 import com.efm.filemanager.utils.DataUtils;
@@ -43,9 +41,7 @@ import com.efm.filemanager.utils.OnAsyncTaskFinished;
 import com.efm.filemanager.utils.OnFileFound;
 import com.efm.filemanager.utils.OpenMode;
 import com.efm.filemanager.utils.application.AppConfig;
-import com.efm.filemanager.utils.cloud.CloudUtil;
 import com.efm.filemanager.utils.files.FileListSorter;
-import com.cloudrail.si.interfaces.CloudStorage;
 
 import java.io.File;
 import java.util.ArrayList;
@@ -171,27 +167,6 @@ public class LoadFilesListTask extends AsyncTask<Void, Void, Pair<OpenMode, Arra
                     }
                 });
                 openmode = OpenMode.OTG;
-                break;
-            case DROPBOX:
-            case BOX:
-            case GDRIVE:
-            case ONEDRIVE:
-                CloudStorage cloudStorage = dataUtils.getAccount(openmode);
-                list = new ArrayList<>();
-
-                try {
-                    listCloud(path, cloudStorage, openmode, new OnFileFound() {
-                        @Override
-                        public void onFileFound(HybridFileParcelable file) {
-                            LayoutElementParcelable elem = createListParcelables(file);
-                            if(elem != null) list.add(elem);
-                        }
-                    });
-                } catch (CloudPluginException e) {
-                    e.printStackTrace();
-                    AppConfig.toast(c, c.getResources().getString(R.string.failed_no_connection));
-                    return new Pair<>(openmode, list);
-                }
                 break;
             default:
                 // we're neither in OTG not in SMB, load the list based on root/general filesystem
@@ -441,12 +416,4 @@ public class LoadFilesListTask extends AsyncTask<Void, Void, Pair<OpenMode, Arra
         OTGUtil.getDocumentFiles(path, c, fileFound);
     }
 
-    private void listCloud(String path, CloudStorage cloudStorage, OpenMode openMode,
-                           OnFileFound fileFoundCallback) throws CloudPluginException {
-        if (!CloudSheetFragment.isCloudProviderAvailable(c)) {
-            throw new CloudPluginException();
-        }
-
-        CloudUtil.getCloudFiles(path, cloudStorage, openMode, fileFoundCallback);
-    }
 }

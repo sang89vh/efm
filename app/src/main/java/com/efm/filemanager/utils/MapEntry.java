@@ -1,7 +1,7 @@
 package com.efm.filemanager.utils;
 
 /**
- * Created by Vishal on 21/12/15 edited by Emmanuel Messulam <emmanuelbendavid@gmail.com>
+ * Created by Khanh Linh <nho89vh@gmail.com>  on 21/12/15 edited by Khanh Linh <nho89vh@gmail.com>
  * A helper class which provides data structure of key/value pair
  *
  * typedef ImmutableEntry<ImmutableEntry<Integer, Integer>, Integer> MapEntry

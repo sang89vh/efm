@@ -15,7 +15,7 @@ import java.util.ArrayList;
 import static com.efm.filemanager.filesystem.compressed.CompressedHelper.SEPARATOR;
 
 /**
- * @author Emmanuel Messulam <emmanuelbendavid@gmail.com>
+ * @author Khanh Linh <nho89vh@gmail.com>
  *         on 2/12/2017, at 00:40.
  */
 

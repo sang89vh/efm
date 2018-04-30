@@ -1,7 +1,7 @@
 package com.efm.filemanager.utils.SmbStreamer;
 
 /**
- * Created by Arpit on 06-07-2015.
+ * Created by Khanh Linh <nho89vh@gmail.com>  on 06-07-2015.
  */
 import android.webkit.MimeTypeMap;
 

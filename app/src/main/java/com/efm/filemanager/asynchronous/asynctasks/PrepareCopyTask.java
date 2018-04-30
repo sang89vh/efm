@@ -34,7 +34,7 @@ import java.util.LinkedList;
 import java.util.Set;
 
 /**
- * Created by arpitkh996 on 12-01-2016, modified by Emmanuel Messulam<emmanuelbendavid@gmail.com>
+ * Created by Khanh Linh <nho89vh@gmail.com> kh996 on 12-01-2016, modified by Emmanuel Messulam<emmanuelbendavid@gmail.com>
  *
  *  This AsyncTask works by creating a tree where each folder that can be fusioned together with
  *  another in the destination is a node (CopyNode). While the tree is being created an indeterminate

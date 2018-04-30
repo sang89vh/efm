@@ -4,7 +4,7 @@ import android.os.Parcel;
 import android.os.Parcelable;
 
 /**
- * Created by arpitkh996 on 16-01-2016.
+ * Created by Khanh Linh <nho89vh@gmail.com> kh996 on 16-01-2016.
  */
 public class ComputerParcelable implements Parcelable {
 

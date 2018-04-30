@@ -9,7 +9,7 @@ import com.efm.filemanager.utils.Utils;
 import com.efm.filemanager.utils.theme.AppTheme;
 
 /**
- * Created by vishal on 18/1/17.
+ * Created by Khanh Linh <nho89vh@gmail.com>  on 18/1/17.
  *
  * Class sets text color based on current theme, without explicit method call in app lifecycle
  */

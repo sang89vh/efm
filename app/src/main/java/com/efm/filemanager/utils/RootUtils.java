@@ -1,7 +1,7 @@
 package com.efm.filemanager.utils;
 
 /**
- * Created by arpitkh996 on 25-01-2016.
+ * Created by Khanh Linh <nho89vh@gmail.com> kh996 on 25-01-2016.
  */
 
 import com.efm.filemanager.exceptions.ShellNotRunningException;

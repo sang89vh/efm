@@ -23,7 +23,7 @@ import java.net.URLDecoder;
 import java.net.URLEncoder;
 
 /**
- * Created by arpitkh996 on 21-01-2016.
+ * Created by Khanh Linh <nho89vh@gmail.com> kh996 on 21-01-2016.
  */
 public class RenameBookmark extends DialogFragment {
 

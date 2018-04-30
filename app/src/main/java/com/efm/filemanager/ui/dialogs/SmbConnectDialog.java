@@ -40,7 +40,7 @@ import java.security.GeneralSecurityException;
 import jcifs.smb.SmbFile;
 
 /**
- * Created by arpitkh996 on 17-01-2016.
+ * Created by Khanh Linh <nho89vh@gmail.com> kh996 on 17-01-2016.
  */
 public class SmbConnectDialog extends DialogFragment {
 

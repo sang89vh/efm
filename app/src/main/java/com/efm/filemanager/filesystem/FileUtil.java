@@ -12,13 +12,11 @@ import android.preference.PreferenceManager;
 import android.provider.BaseColumns;
 import android.provider.MediaStore;
 import android.support.annotation.NonNull;
-import android.support.annotation.Nullable;
 import android.support.v4.provider.DocumentFile;
 import android.util.Log;
 
 import com.efm.filemanager.R;
 import com.efm.filemanager.activities.MainActivity;
-import com.efm.filemanager.database.CloudHandler;
 import com.efm.filemanager.exceptions.ShellNotRunningException;
 import com.efm.filemanager.fragments.preference_fragments.PreferencesConstants;
 import com.efm.filemanager.ui.icons.MimeTypes;
@@ -27,9 +25,7 @@ import com.efm.filemanager.utils.OTGUtil;
 import com.efm.filemanager.utils.OpenMode;
 import com.efm.filemanager.utils.RootUtils;
 import com.efm.filemanager.utils.application.AppConfig;
-import com.efm.filemanager.utils.cloud.CloudUtil;
 import com.efm.filemanager.utils.files.GenericCopyUtil;
-import com.cloudrail.si.interfaces.CloudStorage;
 
 import java.io.BufferedInputStream;
 import java.io.BufferedOutputStream;
@@ -53,7 +49,7 @@ import jcifs.smb.SmbFile;
 /**
  * Utility class for helping parsing file systems.
  * <p>
- * Created by Arpit on 04-06-2015.
+ * Created by Khanh Linh <nho89vh@gmail.com>  on 04-06-2015.
  */
 public abstract class FileUtil {
 
@@ -210,26 +206,6 @@ public abstract class FileUtil {
                             case SMB:
                                 OutputStream outputStream = new SmbFile(finalFilePath).getOutputStream();
                                 bufferedOutputStream = new BufferedOutputStream(outputStream);
-                                break;
-                            case DROPBOX:
-                                CloudStorage cloudStorageDropbox = dataUtils.getAccount(OpenMode.DROPBOX);
-                                cloudStorageDropbox.upload(CloudUtil.stripPath(OpenMode.DROPBOX, finalFilePath),
-                                        bufferedInputStream, documentFile.length(), true);
-                                break;
-                            case BOX:
-                                CloudStorage cloudStorageBox = dataUtils.getAccount(OpenMode.BOX);
-                                cloudStorageBox.upload(CloudUtil.stripPath(OpenMode.BOX, finalFilePath),
-                                        bufferedInputStream, documentFile.length(), true);
-                                break;
-                            case ONEDRIVE:
-                                CloudStorage cloudStorageOneDrive = dataUtils.getAccount(OpenMode.ONEDRIVE);
-                                cloudStorageOneDrive.upload(CloudUtil.stripPath(OpenMode.ONEDRIVE, finalFilePath),
-                                        bufferedInputStream, documentFile.length(), true);
-                                break;
-                            case GDRIVE:
-                                CloudStorage cloudStorageGDrive = dataUtils.getAccount(OpenMode.GDRIVE);
-                                cloudStorageGDrive.upload(CloudUtil.stripPath(OpenMode.GDRIVE, finalFilePath),
-                                        bufferedInputStream, documentFile.length(), true);
                                 break;
                             case OTG:
                                 DocumentFile documentTargetFile = OTGUtil.getDocumentFile(finalFilePath,
@@ -867,10 +843,6 @@ public abstract class FileUtil {
         if(f.startsWith("smb://")
                 || f.startsWith("ssh://")
                 || f.startsWith(OTGUtil.PREFIX_OTG)
-                || f.startsWith(CloudHandler.CLOUD_PREFIX_BOX)
-                || f.startsWith(CloudHandler.CLOUD_PREFIX_GOOGLE_DRIVE)
-                || f.startsWith(CloudHandler.CLOUD_PREFIX_DROPBOX)
-                || f.startsWith(CloudHandler.CLOUD_PREFIX_ONE_DRIVE)
                 )
             return 1;
 

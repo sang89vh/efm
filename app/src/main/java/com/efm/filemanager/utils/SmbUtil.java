@@ -9,7 +9,7 @@ import java.io.IOException;
 import java.security.GeneralSecurityException;
 
 /**
- * Created by Vishal on 30-05-2017.
+ * Created by Khanh Linh <nho89vh@gmail.com>  on 30-05-2017.
  *
  * Class provides various utility methods for SMB client
  */

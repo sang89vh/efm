@@ -25,7 +25,7 @@ import java.util.ArrayList;
 
 
 /**
- * Created by Arpit on 16-11-2014 edited by Emmanuel Messulam <emmanuelbendavid@gmail.com>
+ * Created by Khanh Linh <nho89vh@gmail.com>  on 16-11-2014 edited by Khanh Linh <nho89vh@gmail.com>
  */
 public class HiddenAdapter extends RecyclerView.Adapter<HiddenViewHolder> {
 

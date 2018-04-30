@@ -66,11 +66,8 @@ import com.efm.filemanager.utils.OnFileFound;
 import com.efm.filemanager.utils.OnProgressUpdate;
 import com.efm.filemanager.utils.OpenMode;
 import com.efm.filemanager.utils.application.AppConfig;
-import com.efm.filemanager.utils.cloud.CloudUtil;
 import com.efm.filemanager.utils.share.ShareTask;
 import com.efm.filemanager.utils.theme.AppTheme;
-import com.cloudrail.si.interfaces.CloudStorage;
-import com.cloudrail.si.types.CloudMetaData;
 import com.googlecode.concurrenttrees.radix.ConcurrentRadixTree;
 import com.googlecode.concurrenttrees.radix.node.concrete.voidvalue.VoidValue;
 
@@ -163,22 +160,7 @@ public class FileUtils {
     }
 
 
-    public static long folderSizeCloud(OpenMode openMode, CloudMetaData sourceFileMeta) {
 
-        DataUtils dataUtils = DataUtils.getInstance();
-        long length = 0;
-        CloudStorage cloudStorage = dataUtils.getAccount(openMode);
-        for (CloudMetaData metaData : cloudStorage.getChildren(CloudUtil.stripPath(openMode, sourceFileMeta.getPath()))) {
-
-            if (metaData.getFolder()) {
-                length += folderSizeCloud(openMode, metaData);
-            } else {
-                length += metaData.getSize();
-            }
-        }
-
-        return length;
-    }
 
     /**
      * Helper method to get size of an otg folder
@@ -313,26 +295,7 @@ public class FileUtils {
         // participate in layout passes, etc.)
     }
 
-    public static void shareCloudFile(String path, final OpenMode openMode, final Context context) {
-        new AsyncTask<String, Void, String>() {
 
-            @Override
-            protected String doInBackground(String... params) {
-                String shareFilePath = params[0];
-                CloudStorage cloudStorage = DataUtils.getInstance().getAccount(openMode);
-                return cloudStorage.createShareLink(CloudUtil.stripPath(openMode, shareFilePath));
-            }
-
-            @Override
-            protected void onPostExecute(String s) {
-                super.onPostExecute(s);
-
-                FileUtils.copyToClipboard(context, s);
-                Toast.makeText(context,
-                        context.getResources().getString(R.string.cloud_share_copied), Toast.LENGTH_LONG).show();
-            }
-        }.execute(path);
-    }
 
     public static void shareFiles(ArrayList<File> a, Activity c,AppTheme appTheme,int fab_skin) {
 

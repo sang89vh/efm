@@ -22,7 +22,7 @@ import com.efm.filemanager.utils.Utils;
 import java.io.File;
 
 /**
- * Created by vishal on 14/12/16.
+ * Created by Khanh Linh <nho89vh@gmail.com>  on 14/12/16.
  */
 
 public class PropertiesSheet extends BottomSheetDialogFragment {

@@ -3,8 +3,8 @@ package com.efm.filemanager.utils;
 import android.graphics.Color;
 
 /**
- * Created by Vishal on 12-05-2015
- *      edited by Emmanuel Messulam <emmanuelbendavid@gmail.com>
+ * Created by Khanh Linh <nho89vh@gmail.com>  on 12-05-2015
+ *      edited by Khanh Linh <nho89vh@gmail.com>
  */
 public class PreferenceUtils {
 

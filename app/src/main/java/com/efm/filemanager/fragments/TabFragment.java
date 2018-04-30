@@ -40,7 +40,7 @@ import java.util.ArrayList;
 import java.util.List;
 
 /**
- * Created by Arpit on 15-12-2014.
+ * Created by Khanh Linh <nho89vh@gmail.com>  on 15-12-2014.
  */
 public class TabFragment extends Fragment
         implements ViewPager.OnPageChangeListener {

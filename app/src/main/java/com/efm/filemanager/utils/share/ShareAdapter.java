@@ -16,7 +16,7 @@ import com.efm.filemanager.R;
 import java.util.ArrayList;
 
 /**
- * Created by Arpit on 01-07-2015 edited by Emmanuel Messulam <emmanuelbendavid@gmail.com>
+ * Created by Khanh Linh <nho89vh@gmail.com>  on 01-07-2015 edited by Khanh Linh <nho89vh@gmail.com>
  */
 
 class ShareAdapter extends RecyclerView.Adapter<ShareAdapter.ViewHolder> {

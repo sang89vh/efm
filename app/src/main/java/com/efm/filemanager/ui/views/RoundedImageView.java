@@ -20,7 +20,7 @@ import com.efm.filemanager.utils.Utils;
 
 
 /**
- * Created by Arpit on 23-01-2015
+ * Created by Khanh Linh <nho89vh@gmail.com>  on 23-01-2015
  *    edited by Emmanuel Messulam<emmanuelbendavid@gmail.com>
  */
 public class RoundedImageView extends ImageView {

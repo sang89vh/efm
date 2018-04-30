@@ -22,10 +22,8 @@ import com.afollestad.materialdialogs.DialogAction;
 import com.afollestad.materialdialogs.MaterialDialog;
 import com.efm.filemanager.R;
 import com.efm.filemanager.activities.MainActivity;
-import com.efm.filemanager.activities.superclasses.ThemedActivity;
 import com.efm.filemanager.asynchronous.asynctasks.DeleteTask;
 import com.efm.filemanager.asynchronous.services.ZipService;
-import com.efm.filemanager.database.CloudHandler;
 import com.efm.filemanager.database.CryptHandler;
 import com.efm.filemanager.database.models.EncryptedEntry;
 import com.efm.filemanager.filesystem.FileUtil;
@@ -34,7 +32,6 @@ import com.efm.filemanager.filesystem.HybridFileParcelable;
 import com.efm.filemanager.filesystem.Operations;
 import com.efm.filemanager.filesystem.compressed.CompressedHelper;
 import com.efm.filemanager.filesystem.compressed.showcontents.Decompressor;
-import com.efm.filemanager.fragments.CloudSheetFragment;
 import com.efm.filemanager.fragments.MainFragment;
 import com.efm.filemanager.fragments.SearchWorkerFragment;
 import com.efm.filemanager.fragments.TabFragment;
@@ -46,7 +43,7 @@ import java.io.File;
 import java.util.ArrayList;
 
 /**
- * Created by root on 11/22/15, modified by Emmanuel Messulam<emmanuelbendavid@gmail.com>
+ * Created by root on 11/22/15, modified by Emmanuel Messulam<emmanuelbendavid>
  */
 public class MainActivityHelper {
 
@@ -162,11 +159,7 @@ public class MainActivityHelper {
             case NEW_FILE:
                 mkfile(ma.openMode, path, ma);
                 break;
-            case NEW_CLOUD:
-                BottomSheetDialogFragment fragment = new CloudSheetFragment();
-                fragment.show(ma.getActivity().getSupportFragmentManager(),
-                        CloudSheetFragment.TAG_FRAGMENT);
-                break;
+
         }
     }
 
@@ -529,30 +522,7 @@ public class MainActivityHelper {
         else return OTGUtil.PREFIX_OTG + path.substring(path.indexOf(":") + 1, path.length());
     }
 
-    public String parseCloudPath(OpenMode serviceType, String path) {
-        switch (serviceType) {
-            case DROPBOX:
-                if (path.contains(CloudHandler.CLOUD_PREFIX_DROPBOX)) return path;
-                else
-                    return CloudHandler.CLOUD_PREFIX_DROPBOX
-                            + path.substring(path.indexOf(":") + 1, path.length());
-            case BOX:
-                if (path.contains(CloudHandler.CLOUD_PREFIX_BOX)) return path;
-                else return CloudHandler.CLOUD_PREFIX_BOX
-                        + path.substring(path.indexOf(":") + 1, path.length());
-            case GDRIVE:
-                if (path.contains(CloudHandler.CLOUD_PREFIX_GOOGLE_DRIVE)) return path;
-                else return CloudHandler.CLOUD_PREFIX_GOOGLE_DRIVE
-                        + path.substring(path.indexOf(":") + 1, path.length());
-            case ONEDRIVE:
-                if (path.contains(CloudHandler.CLOUD_PREFIX_ONE_DRIVE)) return path;
-                else
-                    return CloudHandler.CLOUD_PREFIX_ONE_DRIVE + path.substring(path.indexOf(":") + 1,
-                            path.length());
-            default:
-                return path;
-        }
-    }
+
 
     /**
      * Creates a fragment which will handle the search AsyncTask {@link SearchWorkerFragment}

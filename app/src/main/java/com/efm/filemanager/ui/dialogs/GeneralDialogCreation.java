@@ -541,7 +541,6 @@ public class GeneralDialogCreation {
         builder.negativeText(mainActivity.getResources().getString(R.string.no));
         builder.negativeColor(accentColor);
 
-        builder.onPositive((dialog, which) -> mainActivity.deleteConnection(openMode));
 
         builder.onNegative((dialog, which) -> dialog.cancel());
 

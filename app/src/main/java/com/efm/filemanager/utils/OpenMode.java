@@ -1,7 +1,7 @@
 package com.efm.filemanager.utils;
 
 /**
- * Created by vishal on 10/11/16.
+ * Created by Khanh Linh <nho89vh@gmail.com>  on 10/11/16.
  *
  * Class denotes the type of file being handled
  */

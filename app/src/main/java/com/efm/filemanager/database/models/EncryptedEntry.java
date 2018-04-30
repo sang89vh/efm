@@ -1,7 +1,7 @@
 package com.efm.filemanager.database.models;
 
 /**
- * Created by vishal on 8/4/17.
+ * Created by Khanh Linh <nho89vh@gmail.com>  on 8/4/17.
  */
 
 public class EncryptedEntry {

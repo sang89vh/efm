@@ -10,7 +10,7 @@ import com.efm.filemanager.activities.superclasses.BasicActivity;
 import com.efm.filemanager.utils.theme.AppTheme;
 
 /**
- * Created by vishal on 18/2/17.
+ * Created by Khanh Linh <nho89vh@gmail.com>  on 18/2/17.
  *
  * A custom image view which adds an extra attribute to determine a source image when in material
  * dark preference

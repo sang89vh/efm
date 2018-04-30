@@ -12,7 +12,7 @@ import com.efm.filemanager.utils.OpenMode;
  * Worker fragment designed to not be destroyed when the activity holding it is recreated
  * (aka the state changes like screen rotation) thus maintaining alive an AsyncTask (SearchTask in this case)
  *
- * Created by vishal on 26/2/16 edited by EmmanuelMess.
+ * Created by Khanh Linh <nho89vh@gmail.com>  on 26/2/16 edited by EmmanuelMess.
  */
 public class SearchWorkerFragment extends Fragment {
 

@@ -7,7 +7,7 @@ import android.support.annotation.DrawableRes;
 /**
  * Saves data on what should be loaded as an icon for LayoutElementParcelable
  *
- * @author Emmanuel Messulam <emmanuelbendavid@gmail.com>
+ * @author Khanh Linh <nho89vh@gmail.com>
  *         on 6/12/2017, at 17:52.
  */
 public class IconDataParcelable implements Parcelable {

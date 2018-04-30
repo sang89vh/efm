@@ -24,7 +24,7 @@ import java.util.List;
 import java.util.LinkedList;
 
 /**
- * Created by Vishal on 29-05-2017.
+ * Created by Khanh Linh <nho89vh@gmail.com>  on 29-05-2017.
  * Class handles database with tables having list of various utilities like
  * history, hidden files, list paths, grid paths, bookmarks, smb entry
  *
@@ -114,6 +114,11 @@ public class UtilsHandler extends SQLiteOpenHelper {
             default:
                 break;
         }
+    }
+
+    public String getSshAuthpublicKeyName(String path) {
+        Log.i("UtilsHandler","getSshAuthpublicKeyName not implemment <=================");
+        return "";
     }
 
     private enum Operation {

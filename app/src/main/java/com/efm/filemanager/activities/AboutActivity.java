@@ -34,7 +34,7 @@ import com.mikepenz.aboutlibraries.Libs;
 import com.mikepenz.aboutlibraries.LibsBuilder;
 
 /**
- * Created by vishal on 27/7/16.
+ * Created by Khanh Linh <nho89vh@gmail.com>  on 27/7/16.
  */
 public class AboutActivity extends BasicActivity implements View.OnClickListener {
 
@@ -51,8 +51,6 @@ public class AboutActivity extends BasicActivity implements View.OnClickListener
     private SharedPreferences mSharedPref;
 
     private static final String KEY_PREF_STUDIO = "studio";
-    //satochi2017
-    private AdView mAdView;
 
     @Override
     protected void onCreate(@Nullable Bundle savedInstanceState) {
@@ -98,13 +96,6 @@ public class AboutActivity extends BasicActivity implements View.OnClickListener
             mTitleTextView.setAlpha(Math.abs(verticalOffset / (float) appBarLayout.getTotalScrollRange()));
         });
 
-        //satochi2017
-        // Sample AdMob app ID: ca-app-pub-3940256099942544~3347511713
-        MobileAds.initialize(this, "ca-app-pub-3940256099942544/6300978111");
-        //MobileAds.initialize(this, getString(R.string.admobAppId));
-        mAdView = findViewById(R.id.adView);
-        AdRequest adRequest = new AdRequest.Builder().build();
-        mAdView.loadAd(adRequest);
     }
 
     /**

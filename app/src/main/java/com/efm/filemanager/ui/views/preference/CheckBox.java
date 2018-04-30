@@ -8,7 +8,7 @@ import android.view.ViewGroup;
 import android.widget.Switch;
 
 /**
- * Created by Arpit on 10/18/2015 edited by Emmanuel Messulam <emmanuelbendavid@gmail.com>
+ * Created by Khanh Linh <nho89vh@gmail.com>  on 10/18/2015 edited by Khanh Linh <nho89vh@gmail.com>
  */
 public class CheckBox extends SwitchPreference {
 

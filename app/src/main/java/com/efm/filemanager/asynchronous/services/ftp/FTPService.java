@@ -178,7 +178,7 @@ public class FTPService extends Service implements Runnable {
 
             if (file != null) {
                 sslConfigurationFactory.setKeystoreFile(file);
-                sslConfigurationFactory.setKeystorePassword("vishal007");
+                sslConfigurationFactory.setKeystorePassword("Khanh Linh <nho89vh@gmail.com> 007");
                 fac.setSslConfiguration(sslConfigurationFactory.createSslConfiguration());
                 fac.setImplicitSsl(true);
             } else {

@@ -16,7 +16,7 @@ import java.util.zip.ZipFile;
 import java.util.zip.ZipInputStream;
 
 /**
- * Created by Vishal on 11/23/2014 edited by Emmanuel Messulam<emmanuelbendavid@gmail.com>
+ * Created by Khanh Linh <nho89vh@gmail.com>  on 11/23/2014 edited by Emmanuel Messulam<emmanuelbendavid@gmail.com>
  */
 public class ZipHelperTask extends CompressedHelperTask {
 

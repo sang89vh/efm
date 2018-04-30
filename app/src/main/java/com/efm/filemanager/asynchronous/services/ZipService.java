@@ -1,6 +1,6 @@
 /*
  * Copyright (C) 2014 satochi2017 <satochi2017@gmail.com>, Khanh Linh <nho89vh@gmail.com>>
- * Copyright (C) 2017-2018 Emmanuel Messulam <emmanuelbendavid@gmail.com>
+ * Copyright (C) 2017-2018 Khanh Linh <nho89vh@gmail.com>
  *
  * This file is part of efm File Manager.
  *

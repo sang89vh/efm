@@ -12,7 +12,7 @@ import android.view.View;
 import com.efm.filemanager.adapters.RecyclerAdapter;
 
 /**
- * Created by Arpit on 23-04-2015.
+ * Created by Khanh Linh <nho89vh@gmail.com>  on 23-04-2015.
  */
 public class DividerItemDecoration extends RecyclerView.ItemDecoration {
 

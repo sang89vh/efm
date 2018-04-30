@@ -1,5 +1,8 @@
 <?xml version="1.0" encoding="utf-8"?>
 <resources>
-    <string name="admobAppId">ca-app-pub-2200183060572685~3425676401</string>
-    <string name="footerBannerId">ca-app-pub-2200183060572685/6506177456</string>
+    <!--<string name="admobAppId">ca-app-pub-2200183060572685~3425676401</string>-->
+    <string name="admobAppId">ca-app-pub-3940256099942544~3347511713</string>
+    <!--<string name="footerBannerId">ca-app-pub-2200183060572685/6506177456</string>-->
+    <string name="footerBannerId">ca-app-pub-3940256099942544/6300978111</string>
+    <string name="interstitialVideoId">ca-app-pub-3940256099942544/8691691433</string>
 </resources>

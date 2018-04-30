@@ -21,7 +21,7 @@ import java.io.OutputStream;
 import java.lang.ref.WeakReference;
 
 /**
- * @author Emmanuel Messulam <emmanuelbendavid@gmail.com>
+ * @author Khanh Linh <nho89vh@gmail.com>
  *         on 16/1/2018, at 18:36.
  */
 

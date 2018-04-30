@@ -15,7 +15,7 @@ import java.util.Collections;
 import java.util.List;
 
 /**
- * @author Emmanuel Messulam <emmanuelbendavid@gmail.com>
+ * @author Khanh Linh <nho89vh@gmail.com>
  *         on 6/12/2017, at 15:15.
  */
 

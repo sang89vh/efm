@@ -1,5 +1,5 @@
 /*
- * Copyright 2014 KC Ochibili modified by Emmanuel Messulam <emmanuelbendavid@gmail.com>
+ * Copyright 2014 KC Ochibili modified by Khanh Linh <nho89vh@gmail.com>
  *
  * Licensed under the Apache License, Version 2.0 (the "License");
  * you may not use this file except in compliance with the License.

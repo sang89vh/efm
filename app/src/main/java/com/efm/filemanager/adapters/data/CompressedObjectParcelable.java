@@ -8,7 +8,7 @@ import com.efm.filemanager.ui.icons.Icons;
 import java.util.Comparator;
 
 /**
- * @author Emmanuel Messulam <emmanuelbendavid@gmail.com>
+ * @author Khanh Linh <nho89vh@gmail.com>
  *         on 20/11/2017, at 15:26.
  */
 public class CompressedObjectParcelable implements Parcelable {

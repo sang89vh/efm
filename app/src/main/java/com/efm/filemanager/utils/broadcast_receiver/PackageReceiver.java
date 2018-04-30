@@ -8,7 +8,7 @@ import android.content.IntentFilter;
 import com.efm.filemanager.asynchronous.loaders.AppListLoader;
 
 /**
- * Created by vishal on 23/2/17.
+ * Created by Khanh Linh <nho89vh@gmail.com>  on 23/2/17.
  *
  * A broadcast receiver that watches over app installation and removal and
  * notifies {@link AppListLoader} for the same

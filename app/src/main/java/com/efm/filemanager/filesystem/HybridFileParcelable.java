@@ -6,7 +6,7 @@ import android.os.Parcelable;
 import com.efm.filemanager.utils.OpenMode;
 
 /**
- * Created by arpitkh996 on 11-01-2016.
+ * Created by Khanh Linh <nho89vh@gmail.com> kh996 on 11-01-2016.
  */
 public class HybridFileParcelable extends HybridFile implements Parcelable {
 

@@ -14,7 +14,7 @@ import android.widget.Toast;
 import com.efm.filemanager.R;
 
 /**
- * Created by vishal on 1/1/17.
+ * Created by Khanh Linh <nho89vh@gmail.com>  on 1/1/17.
  */
 
 @TargetApi(Build.VERSION_CODES.N)

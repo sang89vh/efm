@@ -5,7 +5,7 @@ import android.content.res.Configuration;
 import android.content.res.Resources;
 
 /**
- * Created by vishal on 23/2/17.
+ * Created by Khanh Linh <nho89vh@gmail.com>  on 23/2/17.
  *
  * Class determines whether there was a config change
  *

@@ -14,7 +14,7 @@ import com.afollestad.materialdialogs.MaterialDialog;
 import com.efm.filemanager.utils.files.EncryptDecryptUtils;
 
 /**
- * Created by vishal on 15/4/17.
+ * Created by Khanh Linh <nho89vh@gmail.com>  on 15/4/17.
  */
 
 @RequiresApi(api = Build.VERSION_CODES.M)
